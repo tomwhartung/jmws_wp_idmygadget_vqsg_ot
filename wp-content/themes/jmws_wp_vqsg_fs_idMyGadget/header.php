@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?> xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 	<title> 
 		<?php bloginfo('name'); ?> <?php wp_title(); ?> 
 	</title>
