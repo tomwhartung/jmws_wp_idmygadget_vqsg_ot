@@ -1,3 +1,11 @@
+<?php
+/**
+ * Minimal WP template for the header
+ *
+ * @package jmws_wp_vqsg_fs_idMyGadget
+ * @since 1.0
+ */
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#">
 <head>
@@ -10,10 +18,14 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<?php wp_head(); ?>	
+<?php
+wp_head();
+global $jmwsIdMyGadget;
+$gadgetChar = substr($jmwsIdMyGadget->getGadgetString(), 0, 1);
+?>
 </head>
 <body <?php body_class(); ?>>
-	<div id="page">
+	<div id="page"><?php print $gadgetChar; ?>
 		<div id="header">
 			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h4><?php bloginfo('description'); ?></h4>
