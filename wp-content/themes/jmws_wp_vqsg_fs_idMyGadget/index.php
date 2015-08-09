@@ -4,6 +4,9 @@
  * Downloaded this from WP Visual Quick Start Guide site
  *    http://www.wpvisualquickstart.com/reference/theme-building/
  *
+ * @package jmws_wp_vqsg_fs_idMyGadget
+ * @since 1.0
+
  */
 get_header();
 get_sidebar();
