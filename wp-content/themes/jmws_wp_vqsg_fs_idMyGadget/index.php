@@ -1,9 +1,15 @@
 <?php
 /**
- * Minimal WordPress theme to which I am adding idMyGadget device detection
- * Downloaded this from WP Visual Quick Start Guide site
+ * WordPress theme to which I am adding idMyGadget device detection
+ * Downloaded this template built From Scratch from the
+ *   WP Visual Quick Start Guide site
  *    http://www.wpvisualquickstart.com/reference/theme-building/
+ * Acronyms used in theme/package (repo) name:
+ *   wp: Word Press
+ *   vqsg: Visual Quick Start Guide
+ *   fs: From Scratch
  *
+ * @author Tom W. Hartung, using the Visual Quick Start Guide's "our-theme" as a starting point
  * @package jmws_wp_vqsg_fs_idMyGadget
  * @since 1.0
 
@@ -33,8 +39,10 @@ get_sidebar();
 		<div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&rarr;</span>')) ?></div>
 	</div>
 </div> <!-- #content -->
- <div id="debug">
+<div id="debug">
 	<p>$jmwsIdMyGadget->getGadgetDetectorString(): <?php print $jmwsIdMyGadget->getGadgetDetectorString(); ?></p>
 	<p>$jmwsIdMyGadget->getGadgetString(): <?php print $jmwsIdMyGadget->getGadgetString(); ?></p>
- </div>
+	<p>home_url(): <?php print home_url(); ?></p>
+	<p>bloginfo('url'): <?php print bloginfo('url'); ?></p>
+</div>
 <?php get_footer(); ?>

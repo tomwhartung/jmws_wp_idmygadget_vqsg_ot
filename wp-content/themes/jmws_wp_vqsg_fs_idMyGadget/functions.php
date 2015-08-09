@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * Functions and other WP code that helps make this theme what it is and do what it does.
+ * Adding code to support device detction
+ *
+ * @author Tom W. Hartung, using the Visual Quick Start Guide's "our-theme" as a starting point
+ * @package jmws_wp_vqsg_fs_idMyGadget
+ * @since 1.0
+ */
 add_action( 'widgets_init', 'my_sidebar' );
 
 function my_sidebar() {

@@ -1,7 +1,9 @@
 <?php
 /**
- * Minimal WP template for the header
+ * WP template for the site header
+ * Updating this as necessary to support Device Detection
  *
+ * @author Tom W. Hartung, using the Visual Quick Start Guide's "our-theme" as a starting point
  * @package jmws_wp_vqsg_fs_idMyGadget
  * @since 1.0
  */
