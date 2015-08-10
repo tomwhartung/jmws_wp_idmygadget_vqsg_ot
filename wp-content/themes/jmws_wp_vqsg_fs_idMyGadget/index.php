@@ -40,6 +40,8 @@ get_sidebar();
 	</div>
 </div> <!-- #content -->
 <div id="debug">
+	<p>get_theme_mod('gadget_detector'): <?php echo get_theme_mod('gadget_detector', 'detect_mobile_browsers') ?></p>
+	<p>get_theme_mod('gadget_detector_radio'): <?php echo get_theme_mod('gadget_detector_radio', 'detect_mobile_browsers') ?></p>
 	<p>$jmwsIdMyGadget->getGadgetDetectorString(): <?php print $jmwsIdMyGadget->getGadgetDetectorString(); ?></p>
 	<p>$jmwsIdMyGadget->getGadgetString(): <?php print $jmwsIdMyGadget->getGadgetString(); ?></p>
 	<p>home_url(): <?php print home_url(); ?></p>
