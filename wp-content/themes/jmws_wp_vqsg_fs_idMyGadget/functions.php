@@ -34,12 +34,12 @@ function idmygadget_customize_register( $wp_customize ) {
 	// add_theme_support( 'gadget-detector' );
 
 	//
-	// Winging it based on docos.
+	// Use a drop-down select element to allow selection of a detector.
 	//
 	$wp_customize->add_section( 'gadget_detector' , array(
 		'title'      => __( 'Gadget Detector', 'jmws_wp_vqsg_fs_idMyGadget' ),
-		'description' => __( 'Test Section Description' ),
-		'priority'   => 30,
+		'description' => __( 'Test using a select element to pick the detector' ),
+		'priority'   => 5,
 	) );
 
 	$wp_customize->add_setting( 'gadget_detector' , array(
@@ -48,7 +48,7 @@ function idmygadget_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'gadget_detector', array(
-		'label'    => __( 'Copied Label', 'jmws_wp_vqsg_fs_idMyGadget' ),
+		'label'    => __( 'Gadget Detector Select', 'jmws_wp_vqsg_fs_idMyGadget' ),
 		'section'  => 'gadget_detector',
 		'type'     => 'select',
 		'choices'  => array('detect_mobile_browsers','mobile_detect','tera_wurfl'),
@@ -56,7 +56,29 @@ function idmygadget_customize_register( $wp_customize ) {
 	) );
 
 	//
-	// Copied from twentyfourteen theme but heavily modified
+	// Try radio buttons, see how they look
+	//
+	$wp_customize->add_section( 'gadget_detector_radio' , array(
+		'title'      => __( 'Gadget Detector Radio', 'jmws_wp_vqsg_fs_idMyGadget' ),
+		'description' => __( 'Test using radio buttons to pick the detector' ),
+		'priority'   => 40,
+	) );
+
+	$wp_customize->add_setting( 'gadget_detector_radio' , array(
+		'default'     => 'detect_mobile_browsers',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'gadget_detector_radio', array(
+		'label'    => __( 'Gadget Detector Radio', 'jmws_wp_vqsg_fs_idMyGadget' ),
+		'section'  => 'gadget_detector_radio',
+		'type'     => 'radio',
+		'choices'  => array('detect_mobile_browsers','mobile_detect','tera_wurfl'),
+		'priority' => 10,
+	) );
+	//
+	// Junk code I have copied and tweaked, trying to learn how this works.
+	// Don't think it does anything, but still may help; consider deleting it
 	//
 	$wp_customize->add_section( 'copied_section', array(
 		'title'          => __( 'Copied Section Name', 'jmws_wp_vqsg_fs_idMyGadget' ),
