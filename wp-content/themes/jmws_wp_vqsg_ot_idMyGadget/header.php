@@ -23,7 +23,12 @@
 <?php
 wp_head();
 global $jmwsIdMyGadget;
-$gadgetChar = substr($jmwsIdMyGadget->getGadgetString(), 0, 1);
+if ( ! isset($jmwsIdMyGadget) )
+{
+	require_once 'idMyGadget/JmwsIdMyGadgetNoDetection.php';
+	$jmwsIdMyGadget = new JmwsIdMyGadgetNoDetection();
+}
+// $gadgetChar = substr($jmwsIdMyGadget->getGadgetString(), 0, 1);
 ?>
 </head>
 <body <?php body_class(); ?>>
