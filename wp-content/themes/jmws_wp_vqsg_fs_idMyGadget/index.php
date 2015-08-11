@@ -29,7 +29,7 @@ get_sidebar();
 				<span class="categories">See more in: <?php the_category(' &middot; '); ?></span>		
 			</div>
 			</div>
-	</div>	
+	</div>
 		<?php endwhile; else: ?>
 	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 	<?php endif; ?>
@@ -40,6 +40,7 @@ get_sidebar();
 	</div>
 </div> <!-- #content -->
 <div id="debug">
+	<p>$theme_object_stylesheet: <?php print $theme_object_stylesheet; ?></p>
 	<p>get_theme_mod('gadget_detector_select'):
 		<?php echo get_theme_mod('gadget_detector_select', 'detect_mobile_browsers') ?></p>
 	<p>get_theme_mod('gadget_detector_radio'):
@@ -48,9 +49,9 @@ get_sidebar();
 		<?php print $jmwsIdMyGadget->getGadgetDetectorString(); ?></p>
 	<p>$jmwsIdMyGadget->getGadgetString():
 		<?php print $jmwsIdMyGadget->getGadgetString(); ?></p>
-	<p>$gadget_detectors_array[0]: <?php print $gadget_detectors_array[0]; ?></p>
-	<p>$gadget_detectors_array[1]: <?php print $gadget_detectors_array[1]; ?></p>
-	<p>$gadget_detectors_array[2]: <?php print $gadget_detectors_array[2]; ?></p>
+	<p>$gadgetDetectorIndex: <?php print $gadgetDetectorIndex; ?></p>
+	<p>$gadgetDetectorString: <?php print $gadgetDetectorString; ?></p>
+	<p>$idMyGadgetClass: <?php print $idMyGadgetClass; ?></p>
 	<p>home_url(): <?php print home_url(); ?></p>
 	<p>bloginfo('url'): <?php print bloginfo('url'); ?></p>
 </div>
