@@ -40,10 +40,17 @@ get_sidebar();
 	</div>
 </div> <!-- #content -->
 <div id="debug">
-	<p>get_theme_mod('gadget_detector'): <?php echo get_theme_mod('gadget_detector', 'detect_mobile_browsers') ?></p>
-	<p>get_theme_mod('gadget_detector_radio'): <?php echo get_theme_mod('gadget_detector_radio', 'detect_mobile_browsers') ?></p>
-	<p>$jmwsIdMyGadget->getGadgetDetectorString(): <?php print $jmwsIdMyGadget->getGadgetDetectorString(); ?></p>
-	<p>$jmwsIdMyGadget->getGadgetString(): <?php print $jmwsIdMyGadget->getGadgetString(); ?></p>
+	<p>get_theme_mod('gadget_detector_select'):
+		<?php echo get_theme_mod('gadget_detector_select', 'detect_mobile_browsers') ?></p>
+	<p>get_theme_mod('gadget_detector_radio'):
+		<?php echo get_theme_mod('gadget_detector_radio', 'detect_mobile_browsers') ?></p>
+	<p>$jmwsIdMyGadget->getGadgetDetectorString():
+		<?php print $jmwsIdMyGadget->getGadgetDetectorString(); ?></p>
+	<p>$jmwsIdMyGadget->getGadgetString():
+		<?php print $jmwsIdMyGadget->getGadgetString(); ?></p>
+	<p>$gadget_detectors_array[0]: <?php print $gadget_detectors_array[0]; ?></p>
+	<p>$gadget_detectors_array[1]: <?php print $gadget_detectors_array[1]; ?></p>
+	<p>$gadget_detectors_array[2]: <?php print $gadget_detectors_array[2]; ?></p>
 	<p>home_url(): <?php print home_url(); ?></p>
 	<p>bloginfo('url'): <?php print bloginfo('url'); ?></p>
 </div>

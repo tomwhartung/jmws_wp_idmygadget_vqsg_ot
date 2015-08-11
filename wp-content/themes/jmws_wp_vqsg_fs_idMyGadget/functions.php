@@ -29,28 +29,45 @@ function my_sidebar() {
 /* Add Custom Thumbnail support */
 add_theme_support( 'post-thumbnails' );
 
+/*
+ * Array of Gadget Detectors
+ */
+$gadget_detectors_array = array(
+	'detect_mobile_browsers',
+	'mobile_detect',
+	'tera_wurfl'
+);
+/**
+ * Add a new section to the Theme Customization Menu (sidebar in admin) to allow
+ * selection of the gadget detector.
+ *
+ * @param type $wp_customize
+ */
 function idmygadget_customize_register( $wp_customize ) {
+	global $gadget_detectors_array;
+
 	//All our sections, settings, and controls will be added here
 	// add_theme_support( 'gadget-detector' );
 
 	//
 	// Use a drop-down select element to allow selection of a detector.
 	//
-	$wp_customize->add_section( 'gadget_detector' , array(
-		'title'      => __( 'Gadget Detector', 'jmws_wp_vqsg_fs_idMyGadget' ),
+	$wp_customize->add_section( 'gadget_detector_select' , array(
+		'title'      => __( 'Gadget Detector Select', 'jmws_wp_vqsg_fs_idMyGadget' ),
 		'description' => __( 'Test using a select element to pick the detector' ),
 		'priority'   => 5,
 	) );
 
-	$wp_customize->add_setting( 'gadget_detector' , array(
+	$wp_customize->add_setting( 'gadget_detector_select' , array(
 		'default'     => 'detect_mobile_browsers',
 		'transport'   => 'refresh',
 	) );
 
-	$wp_customize->add_control( 'gadget_detector', array(
+	$wp_customize->add_control( 'gadget_detector_select', array(
 		'label'    => __( 'Gadget Detector Select', 'jmws_wp_vqsg_fs_idMyGadget' ),
-		'section'  => 'gadget_detector',
+		'section'  => 'gadget_detector_select',
 		'type'     => 'select',
+	//	'choices'  => $gadget_detectors_array,
 		'choices'  => array('detect_mobile_browsers','mobile_detect','tera_wurfl'),
 		'priority' => 5,
 	) );
@@ -73,7 +90,7 @@ function idmygadget_customize_register( $wp_customize ) {
 		'label'    => __( 'Gadget Detector Radio', 'jmws_wp_vqsg_fs_idMyGadget' ),
 		'section'  => 'gadget_detector_radio',
 		'type'     => 'radio',
-		'choices'  => array('detect_mobile_browsers','mobile_detect','tera_wurfl'),
+		'choices'  => $gadget_detectors_array,
 		'priority' => 10,
 	) );
 	//
@@ -97,10 +114,8 @@ function idmygadget_customize_register( $wp_customize ) {
 		'choices'  => array('a','b','c'),
 		'priority' => 1,
 	) );
-
 }
 
 add_action( 'customize_register', 'idmygadget_customize_register' );
-
 
 ?>
