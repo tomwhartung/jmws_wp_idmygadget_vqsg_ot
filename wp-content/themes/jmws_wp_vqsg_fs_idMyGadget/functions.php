@@ -33,7 +33,7 @@ add_theme_support( 'post-thumbnails' );
  * Array of Gadget Detectors
  */
 $gadget_detectors_array = array(
-	'detect_mobile_browsers',
+	'detect_mobile_browsers',   // note that this is used as the default throughout
 	'mobile_detect',
 	'tera_wurfl'
 );
@@ -59,7 +59,7 @@ function idmygadget_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'gadget_detector_select' , array(
-		'default'     => 'detect_mobile_browsers',
+		'default'     => $gadget_detectors_array[0],
 		'transport'   => 'refresh',
 	) );
 
@@ -67,8 +67,8 @@ function idmygadget_customize_register( $wp_customize ) {
 		'label'    => __( 'Gadget Detector Select', 'jmws_wp_vqsg_fs_idMyGadget' ),
 		'section'  => 'gadget_detector_select',
 		'type'     => 'select',
-	//	'choices'  => $gadget_detectors_array,
-		'choices'  => array('detect_mobile_browsers','mobile_detect','tera_wurfl'),
+		'choices'  => $gadget_detectors_array,
+	//	'choices'  => array('detect_mobile_browsers','mobile_detect','tera_wurfl'),
 		'priority' => 5,
 	) );
 
@@ -82,7 +82,7 @@ function idmygadget_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'gadget_detector_radio' , array(
-		'default'     => 'detect_mobile_browsers',
+		'default'     => $gadget_detectors_array[0],
 		'transport'   => 'refresh',
 	) );
 
