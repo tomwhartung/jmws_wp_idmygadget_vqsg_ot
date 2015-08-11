@@ -29,14 +29,6 @@ function my_sidebar() {
 /* Add Custom Thumbnail support */
 add_theme_support( 'post-thumbnails' );
 
-/*
- * Array of Gadget Detectors
- */
-$gadget_detectors_array = array(
-	'detect_mobile_browsers',   // note that this is used as the default throughout
-	'mobile_detect',
-	'tera_wurfl'
-);
 /**
  * Add a new section to the Theme Customization Menu (sidebar in admin) to allow
  * selection of the gadget detector.
