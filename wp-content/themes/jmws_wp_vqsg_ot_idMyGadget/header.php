@@ -28,11 +28,17 @@ if ( ! isset($jmwsIdMyGadget) )
 	require_once 'idMyGadget/JmwsIdMyGadgetNoDetection.php';
 	$jmwsIdMyGadget = new JmwsIdMyGadgetNoDetection();
 }
-// $gadgetChar = substr($jmwsIdMyGadget->getGadgetString(), 0, 1);
 ?>
 </head>
 <body <?php body_class(); ?>>
-	<div id="page"><?php print $gadgetChar; ?>
+	<div id="page">
+		<?php
+			/*
+			 * Displaying these values can help us make sure we haven't inadvertently
+			 * broken something while we are actively working on this.
+			 */
+			print $jmwsIdMyGadget->getGadgetDetectorStringChar() . '/' . $jmwsIdMyGadget->getGadgetStringChar();
+		?>
 		<div id="header">
 			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h4><?php bloginfo('description'); ?></h4>
