@@ -20,6 +20,9 @@ class JmwsIdMyGadgetNoDetection
 	const GADGET_STRING_TABLET = 'Tablet';
 	const GADGET_STRING_PHONE = 'Phone';
 
+	public $supportedGadgetDetectors = array();
+	public $supportedThemes = array();
+
 	/**
 	 * A string that represents the gadget being used
 	 */
@@ -39,6 +42,11 @@ class JmwsIdMyGadgetNoDetection
 	{
 		return $this->gadgetString;   // set in constructor
 	}
+	public function getGadgetStringChar()
+	{
+		return '?';
+	}
+
 	/**
 	 * For now, when there is no detection, assume we are on a desktop..
 	 * @return string gadgetString
@@ -48,11 +56,16 @@ class JmwsIdMyGadgetNoDetection
 		$this->gadgetString = self::GADGET_STRING_DESKTOP;
 		return $this->gadgetString;
 	}
+
 	/**
 	 * The gadgetDetectorString is not available, return a suitable substitute
 	 */
 	public function getGadgetDetectorString()
 	{
 		return self::GADGET_STRING_DETECTOR_NOT_INSTALLED;
+	}
+	public function getGadgetDetectorStringChar()
+	{
+		return '?';
 	}
 }
