@@ -40,6 +40,8 @@ get_sidebar();
 	</div>
 </div> <!-- #content -->
 <div id="debug">
+	<p>print_r( $all_plugins):
+		<?php global $all_plugins; print_r( $all_plugins ); ?></p>
 	<p>$theme_object_stylesheet: <?php print $theme_object_stylesheet; ?></p>
 	<p>get_theme_mod('gadget_detector_select'):
 		<?php echo get_theme_mod('gadget_detector_select', 'detect_mobile_browsers') ?></p>
@@ -49,6 +51,13 @@ get_sidebar();
 		<?php print $jmwsIdMyGadget->getGadgetDetectorString(); ?></p>
 	<p>$jmwsIdMyGadget->getGadgetString():
 		<?php print $jmwsIdMyGadget->getGadgetString(); ?></p>
+
+
+
+	<p>: <?php print ''; ?></p>
+	<p>WP_PLUGIN_DIR: <?php print WP_PLUGIN_DIR; ?></p>
+	<p>$jmws_idMyGadget_for_wordpress_is_installed: <?php print $jmws_idMyGadget_for_wordpress_is_installed ; ?></p>
+	<p>$jmws_idMyGadget_for_wordpress_is_active: <?php print $jmws_idMyGadget_for_wordpress_is_active ; ?></p>
 	<p>$gadgetDetectorIndex: <?php print $gadgetDetectorIndex; ?></p>
 	<p>$gadgetDetectorString: <?php print $gadgetDetectorString; ?></p>
 	<p>$idMyGadgetClass: <?php print $idMyGadgetClass; ?></p>

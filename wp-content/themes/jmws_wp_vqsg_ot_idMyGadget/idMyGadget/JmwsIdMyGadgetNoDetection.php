@@ -11,6 +11,8 @@ if( !defined('DS') )
 
 class JmwsIdMyGadgetNoDetection
 {
+	public $errorMessage = '<div><p class="idmygadget-error">This theme uses the jmws_idMyGadget_for_wordpress plugin.  Please install and activate the plugin, which is available on github, or use a different theme.</p></div>';
+
 	/**
 	 * Valid values for the gadget string.  Use invalid values at your own risk!
 	 */
@@ -19,6 +21,8 @@ class JmwsIdMyGadgetNoDetection
 	const GADGET_STRING_DESKTOP = 'Desktop';
 	const GADGET_STRING_TABLET = 'Tablet';
 	const GADGET_STRING_PHONE = 'Phone';
+
+	const IDMYGADGET_PLUGIN_FILE = 'jmws_idMyGadget_for_wordpress/jmws_idMyGadget_for_wordpress.php';
 
 	public $supportedGadgetDetectors = array();
 	public $supportedThemes = array();

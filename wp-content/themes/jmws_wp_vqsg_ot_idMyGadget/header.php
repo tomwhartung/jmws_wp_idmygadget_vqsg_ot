@@ -22,11 +22,45 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
 wp_head();
+//
+// If the device detection object has not been created,
+//   create an object that can keep the app from whitescreening with a null pointer etc. and
+//   display an appropriate error message
+//
 global $jmwsIdMyGadget;
+
+global $rooted_plugin_file_name;
+global $all_plugins;
+global $jmws_idMyGadget_for_wordpress_is_installed;
+global $jmws_idMyGadget_for_wordpress_is_active;
+$jmws_idMyGadget_for_wordpress_is_installed= TRUE;
+$jmws_idMyGadget_for_wordpress_is_active = TRUE;
+
+
 if ( ! isset($jmwsIdMyGadget) )
 {
 	require_once 'idMyGadget/JmwsIdMyGadgetNoDetection.php';
 	$jmwsIdMyGadget = new JmwsIdMyGadgetNoDetection();
+	$rooted_plugin_file_name =  WP_PLUGIN_DIR . '/' .
+		JmwsIdMyGadgetNoDetection::IDMYGADGET_PLUGIN_FILE;
+
+	if ( file_exists($rooted_plugin_file_name) )
+	{
+		if ( ! function_exists( 'get_plugins' ) )
+		{
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
+		$all_plugins = get_plugins();
+		if ( ! is_plugin_active(JmwsIdMyGadgetNoDetection::IDMYGADGET_PLUGIN_FILE) )
+		{
+			$jmws_idMyGadget_for_wordpress_is_active = FALSE;
+		}
+	}
+	else
+	{
+		$jmws_idMyGadget_for_wordpress_is_active = FALSE;
+		$jmws_idMyGadget_for_wordpress_is_installed = FALSE;
+	}
 }
 ?>
 </head>
@@ -43,3 +77,4 @@ if ( ! isset($jmwsIdMyGadget) )
 			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h4><?php bloginfo('description'); ?></h4>
 		</div>
+		<?php echo $jmsIdMyGadget->errorMessage; ?>
