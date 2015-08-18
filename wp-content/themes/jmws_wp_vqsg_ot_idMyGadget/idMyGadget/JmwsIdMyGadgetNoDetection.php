@@ -8,6 +8,32 @@ if( !defined('DS') )
 {
 	define('DS', DIRECTORY_SEPARATOR);
 }
+/**
+ * Error message prologue
+ */
+define( 'IDMYGADGET_ERROR_PROLOG',
+	'<div class="idmygadget-error"><p>This theme depends on the ' .
+	'<a class="idmygadget-error" href="https://github.com/tomwhartung/jmws_idMyGadget_for_wordpress" target="_blank">' .
+		'jmws_idMyGadget_for_wordpress plugin</a>.</p>' );
+/**
+ * Error message for when the plugin is not installed
+ */
+define( 'IDMYGADGET_NOT_INSTALLED',
+	IDMYGADGET_ERROR_PROLOG .
+	'<p>Please <span class="idmygadget-error">install and activate the plugin,</span> which is available on github, or use a different theme.</p></div>' );
+/**
+ * Error message for when the plugin is not active
+ */
+define( 'IDMYGADGET_NOT_ACTIVE',
+	IDMYGADGET_ERROR_PROLOG .
+	'<p>Please <span class="idmygadget-error">activate the plugin</span> in the Wordpress administration console, or use a different theme.</p></div>' );
+/**
+ * Error message for when there is an unknown error (bug?)
+ */
+define( 'IDMYGADGET_UNKNOWN_ERROR',
+	IDMYGADGET_ERROR_PROLOG .
+	'<p>The jmwsIdMyGadget object is missing, so the jmws_idMyGadget_for_wordpress plugin must be broken.</p>' .
+	'<p>Please fix the plugin or use a different theme.</p></div>' );
 
 class JmwsIdMyGadgetNoDetection
 {
@@ -20,18 +46,6 @@ class JmwsIdMyGadgetNoDetection
 	 * @var type String
 	 */
 	public $errorMessage = '';
-	/**
-	 * Error message for when the plugin is not installed
-	 */
-	const IDMYGADGET_NOT_INSTALLED = '<div><p class="idmygadget-error">This theme uses the jmws_idMyGadget_for_wordpress plugin.  Please install and activate the plugin, which is available on github, or use a different theme.</p></div>';
-	/**
-	 * Error message for when the plugin is not active
-	 */
-	const IDMYGADGET_NOT_ACTIVE = '<div><p class="idmygadget-error">This theme uses the jmws_idMyGadget_for_wordpress plugin.  Please activate the plugin in the Wordpress administration console, or use a different theme.</p></div>';
-	/**
-	 * Error message for when there is an unknown error (bug?)
-	 */
-	const IDMYGADGET_UNKNOWN_ERROR = '<div><p class="idmygadget-error">Missing jmwsIdMyGadget object; the jmws_idMyGadget_for_wordpress plugin must be broken.  Please fix the plugin or use a different theme.</p></div>';
 
 	/**
 	 * Valid values for the gadget string.  Use invalid values at your own risk!
