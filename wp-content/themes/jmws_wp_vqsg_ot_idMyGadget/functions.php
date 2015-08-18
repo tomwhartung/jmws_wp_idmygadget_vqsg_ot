@@ -26,4 +26,13 @@ function my_sidebar() {
 
 }
 
-?>
+/**
+ * This is the proper way to enqueue scripts and stylesheets
+ */
+function enqueue_idmygadget_css()
+{
+	$css_file = get_template_directory_uri() . "/idMyGadget/idMyGadget.css";
+	wp_enqueue_style( 'idMyGadget-css', $css_file );
+}
+
+add_action( 'wp_enqueue_scripts', 'enqueue_idmygadget_css' );
