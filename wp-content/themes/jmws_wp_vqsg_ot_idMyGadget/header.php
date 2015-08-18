@@ -28,7 +28,6 @@ wp_head();
 //   display an appropriate error message
 //
 global $jmwsIdMyGadget;
-
 global $all_plugins;
 global $jmws_idMyGadget_for_wordpress_is_installed;
 global $jmws_idMyGadget_for_wordpress_is_active;
@@ -44,7 +43,7 @@ else
 	require_once 'idMyGadget/JmwsIdMyGadgetNoDetection.php';
 	$jmwsIdMyGadget = new JmwsIdMyGadgetNoDetection();
 	$rooted_plugin_file_name =  WP_PLUGIN_DIR . '/' . JmwsIdMyGadgetNoDetection::IDMYGADGET_PLUGIN_FILE;
-	$jmwsIdMyGadget->errorMessage = $jmwsIdMyGadget::IDMYGADGET_UNKNOWN_ERROR;
+	$jmwsIdMyGadget->errorMessage = IDMYGADGET_UNKNOWN_ERROR;
 	if ( file_exists($rooted_plugin_file_name) )  // it's installed but probably not active
 	{
 		if ( ! function_exists( 'get_plugins' ) )
@@ -55,14 +54,14 @@ else
 		if ( ! is_plugin_active(JmwsIdMyGadgetNoDetection::IDMYGADGET_PLUGIN_FILE) )
 		{
 			$jmws_idMyGadget_for_wordpress_is_active = FALSE;
-			$jmwsIdMyGadget->errorMessage = $jmwsIdMyGadget::IDMYGADGET_NOT_ACTIVE;
+			$jmwsIdMyGadget->errorMessage = IDMYGADGET_NOT_ACTIVE;
 		}
 	}
 	else
 	{
 		$jmws_idMyGadget_for_wordpress_is_active = FALSE;
 		$jmws_idMyGadget_for_wordpress_is_installed = FALSE;
-		$jmwsIdMyGadget->errorMessage = $jmwsIdMyGadget::IDMYGADGET_NOT_INSTALLED;
+		$jmwsIdMyGadget->errorMessage = IDMYGADGET_NOT_INSTALLED;
 	}
 }
 ?>

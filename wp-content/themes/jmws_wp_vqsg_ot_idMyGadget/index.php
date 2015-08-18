@@ -40,8 +40,6 @@ get_sidebar();
 	</div>
 </div> <!-- #content -->
 <div id="debug">
-	<p>print_r( $all_plugins):
-		<?php global $all_plugins; print_r( $all_plugins ); ?></p>
 	<p>$theme_object_stylesheet: <?php print $theme_object_stylesheet; ?></p>
 	<p>get_theme_mod('gadget_detector_select'):
 		<?php echo get_theme_mod('gadget_detector_select', 'detect_mobile_browsers') ?></p>
@@ -55,13 +53,13 @@ get_sidebar();
 
 
 	<p>: <?php print ''; ?></p>
-	<p>WP_PLUGIN_DIR: <?php print WP_PLUGIN_DIR; ?></p>
-	<p>$jmws_idMyGadget_for_wordpress_is_installed: <?php print $jmws_idMyGadget_for_wordpress_is_installed ; ?></p>
-	<p>$jmws_idMyGadget_for_wordpress_is_active: <?php print $jmws_idMyGadget_for_wordpress_is_active ; ?></p>
-	<p>$gadgetDetectorIndex: <?php print $gadgetDetectorIndex; ?></p>
-	<p>$gadgetDetectorString: <?php print $gadgetDetectorString; ?></p>
-	<p>$idMyGadgetClass: <?php print $idMyGadgetClass; ?></p>
-	<p>home_url(): <?php print home_url(); ?></p>
+	<p>: <?php print ''; ?></p>
+	<p>: <?php print ''; ?></p>
+	<p>bloginfo( 'stylesheet_url' ): <?php print bloginfo( 'stylesheet_url' ); ?></p>
+	<p>get_stylesheet_uri(): <?php print get_stylesheet_uri(); ?></p>
+	<p>get_theme_root(): <?php print get_theme_root(); ?></p>
+	<p>get_stylesheet_directory(): <?php print get_stylesheet_directory(); ?></p>
+	<p>get_template_directory_uri(): <?php print get_template_directory_uri(); ?></p>
 	<p>bloginfo('url'): <?php print bloginfo('url'); ?></p>
 </div>
 <?php get_footer(); ?>
