@@ -1,9 +1,24 @@
 /*
  * Styles for use by idMyGadget code
  */
-.idmygadget-error {
+div.idmygadget-error {
 	background-color: white;
 	border: solid 2px red;
 	color: red;
+	margin: 1em;
+	padding: 1em;
+}
+a.idmygadget-error {
+	color: red;
 	font-weight: bold;
+	text-decoration: underline;
+}
+a.idmygadget-error:hover {
+	color: blue;
+	text-decoration: underline;
+}
+span.idmygadget-error {
+	color: red;
+	font-weight: bold;
+	text-decoration: none;
 }
