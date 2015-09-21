@@ -36,7 +36,18 @@ $jmws_idMyGadget_for_wordpress_is_active = TRUE;
 
 if ( isset($jmwsIdMyGadget) )
 {
-	unset( $jmwsIdMyGadget->errorMessage );
+	if ( $jmwsIdMyGadget->isInstalled() )
+	{
+		unset( $jmwsIdMyGadget->errorMessage );
+	}
+	else
+	{
+		$linkToReadmeOnGithub =
+			'<a href="' . $jmwsIdMyGadget->getLinkToReadme() . '" target="_blank">' .
+				'the appropriate README.md file on github.</a>';
+		$jmwsIdMyGadget->errorMessage = IDMYGADGET_DETECTOR_NOT_INSTALLED_OPENING .
+			$linkToReadmeOnGithub . IDMYGADGET_DETECTOR_NOT_INSTALLED_CLOSING;
+	}
 }
 else
 {
