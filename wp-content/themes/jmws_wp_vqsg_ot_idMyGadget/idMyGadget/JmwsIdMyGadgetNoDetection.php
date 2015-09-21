@@ -14,19 +14,19 @@ if( !defined('DS') )
 define( 'IDMYGADGET_ERROR_PROLOG',
 	'<div class="idmygadget-error"><p>This theme depends on the ' .
 	'<a class="idmygadget-error" href="https://github.com/tomwhartung/jmws_idMyGadget_for_wordpress" target="_blank">' .
-		'jmws_idMyGadget_for_wordpress plugin</a>.</p>' );
+		'jmws_idMyGadget_for_wordpress</a> plugin.</p>' );
 /**
  * Error message for when the plugin is not installed
  */
 define( 'IDMYGADGET_NOT_INSTALLED',
-	IDMYGADGET_ERROR_PROLOG .
-	'<p>Please <span class="idmygadget-error">install and activate the plugin,</span> which is available on github, or use a different theme.</p></div>' );
+	IDMYGADGET_ERROR_PROLOG . '<p>It appears this plugin is <span class="idmygadget-error">not installed</span>.</p>' .
+	'Please <span class="idmygadget-error">install and activate the plugin,</span> which is available on github, or use a different theme.</p></div>' );
 /**
  * Error message for when the plugin is not active
  */
 define( 'IDMYGADGET_NOT_ACTIVE',
-	IDMYGADGET_ERROR_PROLOG .
-	'<p>Please <span class="idmygadget-error">activate the plugin</span> in the Wordpress administration console, or use a different theme.</p></div>' );
+	IDMYGADGET_ERROR_PROLOG . '<p>It appears this plugin is <span class="idmygadget-error">installed but not active</span>.</p>' .
+	'Please <span class="idmygadget-error">activate the plugin</span> in the Wordpress administration console, or use a different theme.</p></div>' );
 /**
  * Error message for when there is an unknown error (bug?)
  */

@@ -23,7 +23,7 @@
 <?php
 wp_head();
 //
-// If the device detection object has not been created,
+// If the device detection object has NOT been created,
 //   create an object that can keep the app from whitescreening with a null pointer etc. and
 //   display an appropriate error message
 //
