@@ -20,67 +20,21 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<?php wp_head(); ?>
 <?php
-wp_head();
 //
 // If the device detection object has NOT been created,
 //   create an object that can keep the app from whitescreening with a null pointer etc. and
 //   display an appropriate error message
 //
 global $jmwsIdMyGadget;
-global $all_plugins;
-global $jmws_idMyGadget_for_wordpress_is_installed;
-global $jmws_idMyGadget_for_wordpress_is_active;
-$jmws_idMyGadget_for_wordpress_is_installed= TRUE;
-$jmws_idMyGadget_for_wordpress_is_active = TRUE;
-
-if ( isset($jmwsIdMyGadget) )
-{
-	if ( $jmwsIdMyGadget->isInstalled() )
-	{
-		unset( $jmwsIdMyGadget->errorMessage );
-	}
-	else
-	{
-		$linkToReadmeOnGithub =
-			'<a href="' . $jmwsIdMyGadget->getLinkToReadme() . '" class="idmygadget-error" target="_blank">' .
-				'the appropriate README.md file on github.</a>';
-		$jmwsIdMyGadget->errorMessage = IDMYGADGET_DETECTOR_NOT_INSTALLED_OPENING .
-			$linkToReadmeOnGithub . IDMYGADGET_DETECTOR_NOT_INSTALLED_CLOSING;
-	}
-}
-else
-{
-	require_once 'idMyGadget/JmwsIdMyGadgetNoDetection.php';
-	$jmwsIdMyGadget = new JmwsIdMyGadgetNoDetection();
-	$rooted_plugin_file_name =  WP_PLUGIN_DIR . '/' . JmwsIdMyGadgetNoDetection::IDMYGADGET_PLUGIN_FILE;
-	$jmwsIdMyGadget->errorMessage = IDMYGADGET_UNKNOWN_ERROR;
-	if ( file_exists($rooted_plugin_file_name) )  // it's installed but probably not active
-	{
-		if ( ! function_exists( 'get_plugins' ) )
-		{
-			require_once ABSPATH . 'wp-admin/includes/plugin.php';
-		}
-		$all_plugins = get_plugins();
-		if ( ! is_plugin_active(JmwsIdMyGadgetNoDetection::IDMYGADGET_PLUGIN_FILE) )
-		{
-			$jmws_idMyGadget_for_wordpress_is_active = FALSE;
-			$jmwsIdMyGadget->errorMessage = IDMYGADGET_NOT_ACTIVE;
-		}
-	}
-	else
-	{
-		$jmws_idMyGadget_for_wordpress_is_active = FALSE;
-		$jmws_idMyGadget_for_wordpress_is_installed = FALSE;
-		$jmwsIdMyGadget->errorMessage = IDMYGADGET_NOT_INSTALLED;
-	}
-}
+check_idMyGadget_install();
 ?>
 </head>
 <body <?php body_class(); ?>>
 	<div id="page">
 		<?php
-			/*
+			/* For development only, remove when code is stable:
 			 * Displaying these values can help us make sure we haven't inadvertently
 			 * broken something while we are actively working on this.
 			 */
