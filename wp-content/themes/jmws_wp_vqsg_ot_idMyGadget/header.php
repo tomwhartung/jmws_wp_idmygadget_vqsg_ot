@@ -34,10 +34,10 @@ check_idMyGadget_install();
 <body <?php body_class(); ?>>
 	<div id="page">
 		<?php
-			/* For development only, remove when code is stable:
-			 * Displaying these values can help us make sure we haven't inadvertently
-			 * broken something while we are actively working on this.
-			 */
+			// For development only! remove when code is stable:
+			// Displaying these values can help us make sure we haven't inadvertently
+			// broken something while we are actively working on this.
+			//
 			print $jmwsIdMyGadget->getGadgetDetectorStringChar() . '/' . $jmwsIdMyGadget->getGadgetStringChar();
 		?>
 		<div id="header">
