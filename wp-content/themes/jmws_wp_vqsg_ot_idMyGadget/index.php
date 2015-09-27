@@ -40,26 +40,13 @@ get_sidebar();
 	</div>
 </div> <!-- #content -->
 <div id="debug">
-	<p>$theme_object_stylesheet: <?php print $theme_object_stylesheet; ?></p>
-	<p>get_theme_mod('gadget_detector_select'):
-		<?php echo get_theme_mod('gadget_detector_select', 'detect_mobile_browsers') ?></p>
-	<p>get_theme_mod('gadget_detector_radio'):
-		<?php echo get_theme_mod('gadget_detector_radio', 'detect_mobile_browsers') ?></p>
-	<p>$jmwsIdMyGadget->getGadgetDetectorString():
-		<?php print $jmwsIdMyGadget->getGadgetDetectorString(); ?></p>
-	<p>$jmwsIdMyGadget->getGadgetString():
-		<?php print $jmwsIdMyGadget->getGadgetString(); ?></p>
-
-
-
-	<p>: <?php print ''; ?></p>
-	<p>: <?php print ''; ?></p>
-	<p>: <?php print ''; ?></p>
-	<p>bloginfo( 'stylesheet_url' ): <?php print bloginfo( 'stylesheet_url' ); ?></p>
-	<p>get_stylesheet_uri(): <?php print get_stylesheet_uri(); ?></p>
 	<p>get_theme_root(): <?php print get_theme_root(); ?></p>
+	<p>: <?php print ''; ?></p>
+	<p>: <?php print ''; ?></p>
+	<p> bloginfo("name"): <?php print bloginfo('name'); ?></p>
+	<p>get_option('show_site_name_phone'): <?php print get_option('show_site_name_phone'); ?></p>
+	<p>: <?php print ''; ?></p>
+	<p>: <?php print ''; ?></p>
 	<p>get_stylesheet_directory(): <?php print get_stylesheet_directory(); ?></p>
-	<p>get_template_directory_uri(): <?php print get_template_directory_uri(); ?></p>
-	<p>bloginfo('url'): <?php print bloginfo('url'); ?></p>
 </div>
 <?php get_footer(); ?>
