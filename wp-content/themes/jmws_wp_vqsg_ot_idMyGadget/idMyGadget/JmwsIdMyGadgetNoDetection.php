@@ -71,6 +71,15 @@ class JmwsIdMyGadgetNoDetection
 	{
 		$this->setGadgetString();
 	}
+
+	/**
+	 * This class offers no detection, so this always returns FALSE
+	 */
+	public function isInstalled()
+	{
+		return FALSE;
+	}
+
 	/**
 	 * The gadget string is read-only!
 	 */
