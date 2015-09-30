@@ -32,55 +32,77 @@ check_idMyGadget_install();
 
 $site_name = get_bloginfo('name' );
 $site_title = '';
+$site_description = '';
 $header_html = '<div id="header">';
 if ( $jmwsIdMyGadget->isInstalled() )
 {
 	if ( $jmwsIdMyGadget->isPhone() )
 	{
+		$site_title = get_option('idmg_site_title_phone');
+		$site_description = get_option('idmg_site_description_phone');
 		if ( get_option('idmg_show_site_name_phone') )
 		{
 			$header_html .= '<' . get_option('idmg_site_name_element_phone') . ' class="site-name-phone">';
 			$header_html .= $site_name;
 			$header_html .= '</' . get_option('idmg_site_name_element_phone') . '>';
 		}
-		$site_title = get_option('idmg_site_title_phone');
 		if ( strlen($site_title) > 0 )
 		{
 			$header_html .= '<' . get_option('idmg_site_title_element_phone') . ' class="site-title-phone">';
 			$header_html .= $site_title;
 			$header_html .= '</' . get_option('idmg_site_title_element_phone') . '>';
 		}
+		if ( strlen($site_description) > 0 )
+		{
+			$header_html .= '<' . get_option('idmg_site_description_element_phone') . ' class="site-description-phone">';
+			$header_html .= $site_description;
+			$header_html .= '</' . get_option('idmg_site_description_element_phone') . '>';
+		}
 	}
 	else if ( $jmwsIdMyGadget->isTablet() )
 	{
+		$site_title = get_option('idmg_site_title_tablet');
+		$site_description = get_option('idmg_site_description_tablet');
 		if ( get_option('idmg_show_site_name_tablet') )
 		{
 			$header_html .= '<' . get_option('idmg_site_name_element_tablet') . ' class="site-name-tablet">';
 			$header_html .= $site_name;
 			$header_html .= '</' . get_option('idmg_site_name_element_tablet') . '>';
 		}
-		$site_title = get_option('idmg_site_title_tablet');
 		if ( strlen($site_title) > 0 )
 		{
 			$header_html .= '<' . get_option('idmg_site_title_element_tablet') . ' class="site-title-tablet">';
 			$header_html .= $site_title;
 			$header_html .= '</' . get_option('idmg_site_title_element_tablet') . '>';
 		}
+		if ( strlen($site_description) > 0 )
+		{
+			$header_html .= '<' . get_option('idmg_site_description_element_tablet') . ' class="site-description-tablet">';
+			$header_html .= $site_description;
+			$header_html .= '</' . get_option('idmg_site_description_element_tablet') . '>';
+		}
 	}
 	else
 	{
+		$site_title = get_option('idmg_site_title_desktop');
+		$site_description = get_option('idmg_site_description_desktop');
 		if ( get_option('idmg_show_site_name_desktop') )
 		{
 			$header_html .= '<' . get_option('idmg_site_name_element_desktop') . ' class="site-name-desktop">';
 			$header_html .= $site_name;
 			$header_html .= '</' . get_option('idmg_site_name_element_desktop') . '>';
 		}
-		$site_title = get_option('idmg_site_title_desktop');
 		if ( strlen($site_title) > 0 )
 		{
 			$header_html .= '<' . get_option('idmg_site_title_element_desktop') . ' class="site-title-desktop">';
 			$header_html .= $site_title;
 			$header_html .= '</' . get_option('idmg_site_title_element_desktop') . '>';
+		}
+		if ( strlen($site_description) > 0 )
+		{
+			$header_html .= '<' . get_option('idmg_site_description_element_desktop') . ' class="site-description-desktop">';
+			$header_html .= $site_description;
+			$header_html .= '</' . get_option('idmg_site_description_element_desktop') . '>';
 		}
 	}
 }
