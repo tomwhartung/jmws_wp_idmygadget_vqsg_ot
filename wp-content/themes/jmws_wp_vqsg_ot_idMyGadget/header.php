@@ -31,7 +31,7 @@ global $jmwsIdMyGadget;
 check_idMyGadget_install();
 
 $site_name = get_bloginfo('name' );
-// $site_name = 'WTF';
+$site_title = '';
 $header_html = '<div id="header">';
 if ( $jmwsIdMyGadget->isInstalled() )
 {
@@ -43,6 +43,13 @@ if ( $jmwsIdMyGadget->isInstalled() )
 			$header_html .= $site_name;
 			$header_html .= '</' . get_option('idmg_site_name_element_phone') . '>';
 		}
+		$site_title = get_option('idmg_site_title_phone');
+		if ( strlen($site_title) > 0 )
+		{
+			$header_html .= '<' . get_option('idmg_site_title_element_phone') . ' class="site-title-phone">';
+			$header_html .= $site_title;
+			$header_html .= '</' . get_option('idmg_site_title_element_phone') . '>';
+		}
 	}
 	else if ( $jmwsIdMyGadget->isTablet() )
 	{
@@ -51,6 +58,13 @@ if ( $jmwsIdMyGadget->isInstalled() )
 			$header_html .= '<' . get_option('idmg_site_name_element_tablet') . ' class="site-name-tablet">';
 			$header_html .= $site_name;
 			$header_html .= '</' . get_option('idmg_site_name_element_tablet') . '>';
+		}
+		$site_title = get_option('idmg_site_title_tablet');
+		if ( strlen($site_title) > 0 )
+		{
+			$header_html .= '<' . get_option('idmg_site_title_element_tablet') . ' class="site-title-tablet">';
+			$header_html .= $site_title;
+			$header_html .= '</' . get_option('idmg_site_title_element_tablet') . '>';
 		}
 	}
 	else
@@ -61,10 +75,20 @@ if ( $jmwsIdMyGadget->isInstalled() )
 			$header_html .= $site_name;
 			$header_html .= '</' . get_option('idmg_site_name_element_desktop') . '>';
 		}
+		$site_title = get_option('idmg_site_title_desktop');
+		if ( strlen($site_title) > 0 )
+		{
+			$header_html .= '<' . get_option('idmg_site_title_element_desktop') . ' class="site-title-desktop">';
+			$header_html .= $site_title;
+			$header_html .= '</' . get_option('idmg_site_title_element_desktop') . '>';
+		}
 	}
 }
 else
 {
+	// The idMyGadget module is not available so we use this,
+	// which is the original code downloaded in Sept. 2015
+	//
 	$header_html .= '<h1>' .
 		'<a href="' . esc_url( home_url('/') ) . '" ' .
 			'title="' . esc_attr( get_bloginfo('name','display') ) . '" ' .
