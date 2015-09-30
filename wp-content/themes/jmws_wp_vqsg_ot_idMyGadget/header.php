@@ -29,6 +29,49 @@
 //
 global $jmwsIdMyGadget;
 check_idMyGadget_install();
+
+$site_name = get_bloginfo('name' );
+// $site_name = 'WTF';
+$header_html = '<div id="header">';
+if ( $jmwsIdMyGadget->isInstalled() )
+{
+	if ( $jmwsIdMyGadget->isPhone() )
+	{
+		if ( get_option('idmg_show_site_name_phone') )
+		{
+			$header_html .= '<' . get_option('idmg_site_name_element_phone') . ' class="site-name-phone">';
+			$header_html .= $site_name;
+			$header_html .= '</' . get_option('idmg_site_name_element_phone') . '>';
+		}
+	}
+	else if ( $jmwsIdMyGadget->isTablet() )
+	{
+		if ( get_option('idmg_show_site_name_tablet') )
+		{
+			$header_html .= '<' . get_option('idmg_site_name_element_tablet') . ' class="site-name-tablet">';
+			$header_html .= $site_name;
+			$header_html .= '</' . get_option('idmg_site_name_element_tablet') . '>';
+		}
+	}
+	else
+	{
+		if ( get_option('idmg_show_site_name_desktop') )
+		{
+			$header_html .= '<' . get_option('idmg_site_name_element_desktop') . ' class="site-name-desktop">';
+			$header_html .= $site_name;
+			$header_html .= '</' . get_option('idmg_site_name_element_desktop') . '>';
+		}
+	}
+}
+else
+{
+	$header_html .= '<h1>' .
+		'<a href="' . esc_url( home_url('/') ) . '" ' .
+			'title="' . esc_attr( get_bloginfo('name','display') ) . '" ' .
+			'rel="home">' . $site_name . '</a></h1>';
+	$header_html .= '<h4>' . get_bloginfo('description') . '</h4>';
+}
+$header_html .= '</div> <!-- #header -->';
 ?>
 </head>
 <body <?php body_class(); ?>>
@@ -40,12 +83,7 @@ check_idMyGadget_install();
 			//
 			print $jmwsIdMyGadget->getGadgetDetectorStringChar() . '/' . $jmwsIdMyGadget->getGadgetStringChar();
 		?>
-		<div id="header">
-			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-					 title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-					 rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h4><?php bloginfo('description'); ?></h4>
-		</div>
+		<?php echo $header_html ?>
 		<?php
 			if (isset($jmwsIdMyGadget->errorMessage) )
 			{
