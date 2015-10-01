@@ -40,7 +40,7 @@ if ( $jmwsIdMyGadget->isInstalled() )
 	{
 		$site_title = get_option('idmg_site_title_phone');
 		$site_description = get_option('idmg_site_description_phone');
-		if ( get_option('idmg_show_site_name_phone') )
+		if ( get_option('idmg_show_site_name_phone') == 'yes' )
 		{
 			$header_html .= '<' . get_option('idmg_site_name_element_phone') . ' class="site-name-phone">';
 			$header_html .= $site_name;
@@ -63,7 +63,7 @@ if ( $jmwsIdMyGadget->isInstalled() )
 	{
 		$site_title = get_option('idmg_site_title_tablet');
 		$site_description = get_option('idmg_site_description_tablet');
-		if ( get_option('idmg_show_site_name_tablet') )
+		if ( get_option('idmg_show_site_name_tablet') == 'yes' )
 		{
 			$header_html .= '<' . get_option('idmg_site_name_element_tablet') . ' class="site-name-tablet">';
 			$header_html .= $site_name;
@@ -86,7 +86,7 @@ if ( $jmwsIdMyGadget->isInstalled() )
 	{
 		$site_title = get_option('idmg_site_title_desktop');
 		$site_description = get_option('idmg_site_description_desktop');
-		if ( get_option('idmg_show_site_name_desktop') )
+		if ( get_option('idmg_show_site_name_desktop') == 'yes' )
 		{
 			$header_html .= '<' . get_option('idmg_site_name_element_desktop') . ' class="site-name-desktop">';
 			$header_html .= $site_name;
