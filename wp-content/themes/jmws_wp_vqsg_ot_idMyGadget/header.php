@@ -30,6 +30,7 @@
 global $jmwsIdMyGadget;
 check_idMyGadget_install();
 
+$logo_file = '';
 $site_name = get_bloginfo('name' );
 $site_title = '';
 $site_description = '';
@@ -38,8 +39,13 @@ if ( $jmwsIdMyGadget->isInstalled() )
 {
 	if ( $jmwsIdMyGadget->isPhone() )
 	{
-		$site_title = get_option('idmg_site_title_phone');
+		$logo_file = get_option( 'idmg_logo_file_phone' );
+		$site_title = get_option( 'idmg_site_title_phone' );
 		$site_description = get_option('idmg_site_description_phone');
+		if ( strlen($logo_file) > 0 )
+		{
+			$header_html .= '<img src="' . $logo_file . '" class="logo-file-phone" alt="' . $site_name . '" />';
+		}
 		if ( get_option('idmg_show_site_name_phone') == 'yes' )
 		{
 			$header_html .= '<' . get_option('idmg_site_name_element_phone') . ' class="site-name-phone">';
