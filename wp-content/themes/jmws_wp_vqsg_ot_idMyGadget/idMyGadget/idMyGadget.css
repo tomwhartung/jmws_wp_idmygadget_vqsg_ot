@@ -22,3 +22,15 @@ span.idmygadget-error {
 	font-weight: bold;
 	text-decoration: none;
 }
+
+img.logo-file-phone {
+	display: inline;
+	float: left;
+	height: 50px;
+	width: 50px;
+}
+.site-name-phone, .site-title-phone {
+	display: inline;
+	text-align: left;
+	vertical-align: left;
+}
