@@ -43,8 +43,8 @@ get_sidebar();
 	<p>get_theme_root(): <?php print get_theme_root(); ?></p>
 	<p>: <?php print ''; ?></p>
 	<p>: <?php print ''; ?></p>
-	<p> bloginfo("name"): <?php print bloginfo('name'); ?></p>
-	<p>get_option('show_site_name_phone'): <?php print get_option('show_site_name_phone'); ?></p>
+	<p>get_bloginfo("name"): <?php print get_bloginfo('name'); ?></p>
+	<p>get_option('idmg_show_site_name_phone'): <?php print get_option('idmg_show_site_name_phone'); ?></p>
 	<p>: <?php print ''; ?></p>
 	<p>: <?php print ''; ?></p>
 	<p>get_stylesheet_directory(): <?php print get_stylesheet_directory(); ?></p>
