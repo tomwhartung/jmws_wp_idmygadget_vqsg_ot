@@ -23,33 +23,35 @@
 <?php wp_head(); ?>
 <?php
 //
-// If the device detection object has NOT been created,
-//   create an object that can keep the app from whitescreening with a null pointer etc. and
-//   display an appropriate error message
+// check_idMyGadget_install:
+//   If the device detection object has NOT been created,
+//     Create an object that can keep the app from whitescreening with a null pointer etc. and
+//     Display an appropriate error message (markup for that is at the end of this file)
+// If we do have the object,
+//   Call its fcn to get the html we need for the header
 //
 global $jmwsIdMyGadget;
 check_idMyGadget_install();
-
-$logo_file = '';
+$logoTitleDescription = '';
 $site_name = get_bloginfo('name' );
-$site_title = '';
-$site_description = '';
-$header_html = '<div id="header">';
 if ( $jmwsIdMyGadget->isInstalled() )
 {
-	$header_html .= $jmwsIdMyGadget->getHeaderHtml( $header_html );
+	$logoTitleDescription = $jmwsIdMyGadget->getLogoTitleDescriptionHtml();
 }
 else
 {
 	// The idMyGadget module is not available so we use this,
 	// which is the original code downloaded in Sept. 2015
 	//
-	$header_html .= '<h1>' .
+	$logoTitleDescription = '<h1>' .
 		'<a href="' . esc_url( home_url('/') ) . '" ' .
 			'title="' . esc_attr( get_bloginfo('name','display') ) . '" ' .
 			'rel="home">' . $site_name . '</a></h1>';
-	$header_html .= '<h4>' . get_bloginfo('description') . '</h4>';
+	$logoTitleDescription .= '<h4>' . get_bloginfo('description') . '</h4>';
 }
+$header_html = '';
+$header_html .= '<div id="header">';
+$header_html .= $logoTitleDescription;
 $header_html .= '</div> <!-- #header -->';
 ?>
 </head>
