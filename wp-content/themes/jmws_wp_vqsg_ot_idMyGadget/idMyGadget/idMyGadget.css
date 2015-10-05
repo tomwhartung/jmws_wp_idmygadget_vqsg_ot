@@ -29,6 +29,12 @@ img.logo-file-phone {
 	height: 50px;
 	width: 50px;
 }
+img.logo-file-tablet {
+	display: inline;
+	float: left;
+	height: 100px;
+	width: 100px;
+}
 .site-name-phone, .site-title-phone {
 	display: inline;
 	text-align: left;
