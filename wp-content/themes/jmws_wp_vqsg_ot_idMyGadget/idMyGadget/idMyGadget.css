@@ -1,6 +1,42 @@
 /*
  * Styles for use by idMyGadget code
  */
+/*
+ * Styles used for phones
+ */
+img.logo-file-phone {
+	display: inline;
+	float: left;
+	height: 50px;
+	margin: 0.5em;
+	padding: 0.5em;
+	width: 50px;
+}
+.site-name-phone {
+	display: inline;
+	text-align: left;
+	vertical-align: left;
+}
+.site-title-phone,
+.site-description-phone {
+	display: block;
+	margin: 0.5em;
+	padding: 0.5em;
+	text-align: left;
+	vertical-align: left;
+}
+/*
+ * Styles used for tablets
+ */
+img.logo-file-tablet {
+	display: inline;
+	float: left;
+	height: 100px;
+	width: 100px;
+}
+/*
+ * Styles used for the error message
+ */
 div.idmygadget-error {
 	background-color: white;
 	border: solid 2px red;
@@ -23,20 +59,3 @@ span.idmygadget-error {
 	text-decoration: none;
 }
 
-img.logo-file-phone {
-	display: inline;
-	float: left;
-	height: 50px;
-	width: 50px;
-}
-img.logo-file-tablet {
-	display: inline;
-	float: left;
-	height: 100px;
-	width: 100px;
-}
-.site-name-phone, .site-title-phone {
-	display: inline;
-	text-align: left;
-	vertical-align: left;
-}
