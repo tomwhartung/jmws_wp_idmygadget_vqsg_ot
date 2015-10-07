@@ -40,13 +40,13 @@ get_sidebar();
 	</div>
 </div> <!-- #content -->
 <div id="debug">
-	<p>get_theme_root(): <?php print get_theme_root(); ?></p>
-	<p>: <?php print ''; ?></p>
-	<p>: <?php print ''; ?></p>
-	<p>get_bloginfo("name"): <?php print get_bloginfo('name'); ?></p>
-	<p>get_option('idmg_show_site_name_phone'): <?php print get_option('idmg_show_site_name_phone'); ?></p>
-	<p>: <?php print ''; ?></p>
-	<p>: <?php print ''; ?></p>
+	<p><?php print ''; ?></p>
+	<p><?php print ''; ?></p>
+	<p>$jmwsIdMyGadget->getGadgetDetectorString(): <?php print $jmwsIdMyGadget->getGadgetDetectorString(); ?></p>
+	<p><?php print ''; ?></p>
+	<p>$jmwsIdMyGadget->detectionEnabled: <?php print $jmwsIdMyGadget->detectionEnabled; ?></p>
+	<p><?php print ''; ?></p>
+	<p><?php print ''; ?></p>
 	<p>get_stylesheet_directory(): <?php print get_stylesheet_directory(); ?></p>
 </div>
 <?php get_footer(); ?>
