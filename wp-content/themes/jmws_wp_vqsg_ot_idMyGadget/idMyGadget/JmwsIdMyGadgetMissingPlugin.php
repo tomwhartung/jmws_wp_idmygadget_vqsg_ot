@@ -73,9 +73,17 @@ class JmwsIdMyGadgetMissingPlugin
 	}
 
 	/**
-	 * This class offers no detection, so this always returns FALSE
+	 * Test whether this detector's code is installed
+	 * @return boolean TRUE if the code is installed else FALSE
 	 */
 	public function isInstalled()
+	{
+		return FALSE;
+	}
+	/**
+	 * Returns TRUE if device detection is (installed and) enabled, else FALSE
+	 */
+	public function isEnabled()
 	{
 		return FALSE;
 	}
