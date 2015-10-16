@@ -13,7 +13,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-	<title> 
+	<title>vqsg_ot:
 		<?php bloginfo('name'); ?> <?php wp_title(); ?> 
 	</title>
 	

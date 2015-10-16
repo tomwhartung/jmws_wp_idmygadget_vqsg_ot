@@ -6,6 +6,13 @@ It is from the book WordPress Visual Quick Start Guide (I have the Second Editio
 
 I am adding the idMyGadget Device Detection to this.
 
-At this point I do not know how this will turn out, so there's not much else left to say.
+## Specific Changes Made
+
+### header.php
+
+* Changed doctype to html
+
+* Added theme name to title (TODO: REMOVE THIS)
+
 
 
