@@ -71,3 +71,8 @@ $header_html .= '</div> <!-- #header -->';
 				echo $jmwsIdMyGadget->errorMessage;
 			}
 		?>
+		<div class="debug">
+			<p></p>
+			<p>$jmwsIdMyGadget->usingJQueryMobile: <?php echo $jmwsIdMyGadget->usingJQueryMobile ?></p>
+			<p></p>
+		</div><!-- .debug -->
