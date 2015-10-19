@@ -57,9 +57,6 @@ $header_html .= '</div> <!-- #header -->';
 </head>
 <body <?php body_class(); ?>>
 	<div id="page">
-		<?php
-			print get_sanity_check_string(); // For development only! Remove when code is stable.
-		?>
 		<?php echo $header_html ?>
 		<?php
 			if (isset($jmwsIdMyGadget->errorMessage) )
@@ -68,7 +65,5 @@ $header_html .= '</div> <!-- #header -->';
 			}
 		?>
 		<div class="debug">
-			<p></p>
-			<p>jmwsIdMyGadget->usingJQueryMobile: <?php echo $jmwsIdMyGadget->usingJQueryMobile ?></p>
-			<p></p>
-		</div><!-- .debug -->
+			<?php print $jmwsIdMyGadget->getSanityCheckString(); ?>
+		</div> <!-- .debug -->
