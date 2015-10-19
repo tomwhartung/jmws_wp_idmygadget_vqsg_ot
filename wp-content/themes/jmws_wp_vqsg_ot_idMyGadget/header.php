@@ -58,11 +58,7 @@ $header_html .= '</div> <!-- #header -->';
 <body <?php body_class(); ?>>
 	<div id="page">
 		<?php
-			// For development only! remove when code is stable:
-			// Displaying these values can help us make sure we haven't inadvertently
-			// broken something while we are actively working on this.
-			//
-			print $jmwsIdMyGadget->getGadgetDetectorStringChar() . '/' . $jmwsIdMyGadget->getGadgetStringChar();
+			print get_sanity_check_string(); // For development only! Remove when code is stable.
 		?>
 		<?php echo $header_html ?>
 		<?php
@@ -73,6 +69,6 @@ $header_html .= '</div> <!-- #header -->';
 		?>
 		<div class="debug">
 			<p></p>
-			<p>$jmwsIdMyGadget->usingJQueryMobile: <?php echo $jmwsIdMyGadget->usingJQueryMobile ?></p>
+			<p>jmwsIdMyGadget->usingJQueryMobile: <?php echo $jmwsIdMyGadget->usingJQueryMobile ?></p>
 			<p></p>
 		</div><!-- .debug -->
