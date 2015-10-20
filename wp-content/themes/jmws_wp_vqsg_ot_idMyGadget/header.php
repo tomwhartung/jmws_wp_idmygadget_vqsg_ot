@@ -50,12 +50,13 @@ else
 	$logoTitleDescription .= '<h4>' . get_bloginfo('description') . '</h4>';
 }
 $header_html = '';
-$header_html .= '<div id="header">';
+$header_html .= '<header id="header" ' . $jmwsIdMyGadget->jqmDataRole['header'] . ' ';
+$header_html .= $jmwsIdMyGadget->jqmDataThemeAttribute . '>';
 $header_html .= $logoTitleDescription;
-$header_html .= '</div> <!-- #header -->';
+$header_html .= '</header> <!-- #header -->';
 ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); echo $jmwsIdMyGadget->jqmDataRole['header'] ?>>
 	<div id="page">
 		<?php echo $header_html ?>
 		<?php
