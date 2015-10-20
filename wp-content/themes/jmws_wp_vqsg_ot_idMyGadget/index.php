@@ -16,8 +16,9 @@
  */
 get_header();
 get_sidebar();
+global $jmwsIdMyGadget;
 ?>
-<div id="content">
+<div id="content" <?php echo $jmwsIdMyGadget->jqmDataRole['content'] ?>>
 <!--START THE LOOP-->
 	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 	<div class="entry">
