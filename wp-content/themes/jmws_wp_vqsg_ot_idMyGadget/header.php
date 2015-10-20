@@ -56,8 +56,8 @@ $header_html .= $logoTitleDescription;
 $header_html .= '</header> <!-- #header -->';
 ?>
 </head>
-<body <?php body_class(); echo $jmwsIdMyGadget->jqmDataRole['header'] ?>>
-	<div id="page">
+<body <?php body_class(); ?>>
+	<div id="page" <?php echo $jmwsIdMyGadget->jqmDataRole['page'] ?>>
 		<?php echo $header_html ?>
 		<?php
 			if (isset($jmwsIdMyGadget->errorMessage) )
