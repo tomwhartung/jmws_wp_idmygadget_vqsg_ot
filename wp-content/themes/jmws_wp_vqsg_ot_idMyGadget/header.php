@@ -58,6 +58,15 @@ $header_html .= '</header> <!-- #header -->';
 </head>
 <body <?php body_class(); ?>>
 	<div id="page" <?php echo $jmwsIdMyGadget->jqmDataRole['page'] ?>>
+		<?php if( has_nav_menu('phone-header-nav') && $jmwsIdMyGadget->phoneHeaderNavThisDevice ) : ?>
+			<nav>
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'phone-header-nav',
+					) );
+				?>
+			</nav>
+		<?php endif; ?>
 		<?php echo $header_html ?>
 		<?php
 			if (isset($jmwsIdMyGadget->errorMessage) )
