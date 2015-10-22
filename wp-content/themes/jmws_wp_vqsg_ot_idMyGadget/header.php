@@ -59,10 +59,11 @@ $header_html .= '</header> <!-- #header -->';
 <body <?php body_class(); ?>>
 	<div id="page" <?php echo $jmwsIdMyGadget->jqmDataRole['page'] ?> data-title="vqsg_ot:">
 		<?php if( has_nav_menu('phone-header-nav') && $jmwsIdMyGadget->phoneHeaderNavThisDevice ) : ?>
-			<nav>
+			<nav data-role="navbar">
 				<?php
 					wp_nav_menu( array(
 						'theme_location' => 'phone-header-nav',
+						'container' => false,
 					) );
 				?>
 			</nav>
