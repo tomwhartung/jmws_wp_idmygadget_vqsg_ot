@@ -57,7 +57,7 @@ $header_html .= '</header> <!-- #header -->';
 ?>
 </head>
 <body <?php body_class(); ?>>
-	<div id="page" <?php echo $jmwsIdMyGadget->jqmDataRole['page'] ?>>
+	<div id="page" <?php echo $jmwsIdMyGadget->jqmDataRole['page'] ?> data-title="vqsg_ot:">
 		<?php if( has_nav_menu('phone-header-nav') && $jmwsIdMyGadget->phoneHeaderNavThisDevice ) : ?>
 			<nav>
 				<?php
