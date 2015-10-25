@@ -60,12 +60,7 @@ $header_html .= '</header> <!-- #header -->';
 	<div id="page" <?php echo $jmwsIdMyGadget->jqmDataRole['page'] ?> data-title="vqsg_ot:">
 		<?php if( has_nav_menu('phone-header-nav') && $jmwsIdMyGadget->phoneHeaderNavThisDevice ) : ?>
 			<nav data-role="navbar">
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'phone-header-nav',
-						'container' => false,
-					) );
-				?>
+				<?php wp_nav_menu( array( 'theme_location' => 'phone-header-nav', 'container' => false) ); ?>
 			</nav>
 		<?php endif; ?>
 		<?php echo $header_html ?>
