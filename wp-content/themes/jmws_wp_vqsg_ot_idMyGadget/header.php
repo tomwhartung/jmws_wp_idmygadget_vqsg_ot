@@ -42,11 +42,7 @@ else
 {
 	$logoTitleDescription = getLogoTitleDescriptionHtml();
 }
-$header_html = '';
-$header_html .= '<header id="header" ' . $jmwsIdMyGadget->jqmDataRole['header'] . ' ';
-$header_html .= $jmwsIdMyGadget->jqmDataThemeAttribute . '>';
-$header_html .= $logoTitleDescription;
-$header_html .= '</header> <!-- #header -->';
+$header_html = getHeaderHtml( $logoTitleDescription );
 ?>
 </head>
 <body <?php body_class(); ?>>
