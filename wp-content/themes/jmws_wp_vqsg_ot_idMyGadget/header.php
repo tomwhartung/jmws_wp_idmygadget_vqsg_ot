@@ -71,5 +71,5 @@ $header_html .= '</header> <!-- #header -->';
 			}
 		?>
 		<div class="debug">
-			<?php print $jmwsIdMyGadget->getSanityCheckString(); ?>
+			<?php // print $jmwsIdMyGadget->getSanityCheckString(); ?>
 		</div> <!-- .debug -->
