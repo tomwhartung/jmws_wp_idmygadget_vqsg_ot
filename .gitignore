@@ -17,8 +17,13 @@ wp-content/upgrade/
 wp-content/uploads/
 wp-content/wp-cache-config.php
 #
-#  I switch between netbeans and vi, depending on how "serious" the work is
+#  I switch between netbeans, eclipse, and vi
 #
 /nbproject/
+
+/.buildpath
+/.project
+/.settings/
+
 *.swp
 
