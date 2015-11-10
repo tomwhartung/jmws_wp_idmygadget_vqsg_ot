@@ -101,7 +101,7 @@ function check_idMyGadget_install()
 }
 
 /**
- * The idMyGadget module is not available so we use this,
+ * If the idMyGadget module is not available we will use this,
  * which is the original code downloaded in Sept. 2015
  */
 function getLogoTitleDescriptionHtml()
@@ -112,4 +112,16 @@ function getLogoTitleDescriptionHtml()
 			'rel="home">' . $site_name . '</a></h1>';
 	$logoTitleDescription .= '<h4>' . get_bloginfo('description') . '</h4>';
 	return $logoTitleDescription;
+}
+/**
+ * Use the $logoTitleDescription to generate the html for the header
+ */
+function getHeaderHtml( $logoTitleDescription )
+{
+	$headerHtml  = '';
+	$headerHtml  .= '<header id="header" ' . $jmwsIdMyGadget->jqmDataRole['header'] . ' ';
+	$headerHtml  .= $jmwsIdMyGadget->jqmDataThemeAttribute . '>';
+	$headerHtml  .= $logoTitleDescription;
+	$headerHtml  .= '</header> <!-- #header -->';
+	return $headerHtml;
 }
