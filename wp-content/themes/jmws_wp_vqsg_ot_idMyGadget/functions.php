@@ -101,6 +101,30 @@ function check_idMyGadget_install()
 }
 
 /**
+ * Use the $logoTitleDescription to generate the html for the header
+ */
+function getHeaderHtml()
+{
+	global $jmwsIdMyGadget;
+	$logoTitleDescription = '';
+
+	if ( $jmwsIdMyGadget->isInstalled() )
+	{
+		$logoTitleDescription = $jmwsIdMyGadget->getLogoTitleDescriptionHtml();
+	}
+	else
+	{
+		$logoTitleDescription = getLogoTitleDescriptionHtml();
+	}
+
+	$headerHtml  = '';
+	$headerHtml  .= '<header id="header" ' . $jmwsIdMyGadget->jqmDataRole['header'] . ' ';
+	$headerHtml  .= $jmwsIdMyGadget->jqmDataThemeAttribute . '>';
+	$headerHtml  .= $logoTitleDescription;
+	$headerHtml  .= '</header> <!-- #header -->';
+	return $headerHtml;
+}
+/**
  * If the idMyGadget module is not available we will use this,
  * which is the original code downloaded in Sept. 2015
  */
@@ -112,16 +136,4 @@ function getLogoTitleDescriptionHtml()
 			'rel="home">' . $site_name . '</a></h1>';
 	$logoTitleDescription .= '<h4>' . get_bloginfo('description') . '</h4>';
 	return $logoTitleDescription;
-}
-/**
- * Use the $logoTitleDescription to generate the html for the header
- */
-function getHeaderHtml( $logoTitleDescription )
-{
-	$headerHtml  = '';
-	$headerHtml  .= '<header id="header" ' . $jmwsIdMyGadget->jqmDataRole['header'] . ' ';
-	$headerHtml  .= $jmwsIdMyGadget->jqmDataThemeAttribute . '>';
-	$headerHtml  .= $logoTitleDescription;
-	$headerHtml  .= '</header> <!-- #header -->';
-	return $headerHtml;
 }

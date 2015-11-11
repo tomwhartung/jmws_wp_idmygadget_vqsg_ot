@@ -32,17 +32,8 @@
 //
 global $jmwsIdMyGadget;
 check_idMyGadget_install();
-$logoTitleDescription = '';
 $site_name = get_bloginfo('name' );
-if ( $jmwsIdMyGadget->isInstalled() )
-{
-	$logoTitleDescription = $jmwsIdMyGadget->getLogoTitleDescriptionHtml();
-}
-else
-{
-	$logoTitleDescription = getLogoTitleDescriptionHtml();
-}
-$header_html = getHeaderHtml( $logoTitleDescription );
+$header_html = getHeaderHtml();
 ?>
 </head>
 <body <?php body_class(); ?>>
