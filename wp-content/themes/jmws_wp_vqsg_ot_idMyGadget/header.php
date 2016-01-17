@@ -51,5 +51,5 @@ $header_html = getHeaderHtml();
 			}
 		?>
 		<div class="debug">
-			<?php // print $jmwsIdMyGadget->getSanityCheckString(); ?>
+			<?php print $jmwsIdMyGadget->getSanityCheckString(); ?>
 		</div> <!-- .debug -->
