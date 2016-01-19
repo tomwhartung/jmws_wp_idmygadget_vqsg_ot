@@ -37,8 +37,8 @@ class JmwsIdMyGadgetCheckPlugin
 			else
 			{
 				$linkToReadmeOnGithub =
-				'<a href="' . $jmwsIdMyGadget->getLinkToReadme() . '" class="idmygadget-error" target="_blank">' .
-				'the appropriate README.md file on github.</a>';
+					'<a href="' . $jmwsIdMyGadget->getLinkToReadme() . '" class="idmygadget-error" target="_blank">' .
+					'the appropriate README.md file on github.</a>';
 				$jmwsIdMyGadget->errorMessage = IDMYGADGET_DETECTOR_NOT_INSTALLED_OPENING .
 				$linkToReadmeOnGithub . IDMYGADGET_DETECTOR_NOT_INSTALLED_CLOSING;
 			}
@@ -47,9 +47,9 @@ class JmwsIdMyGadgetCheckPlugin
 		{
 			require_once 'JmwsIdMyGadgetMissingPlugin.php';
 			$jmwsIdMyGadget = new JmwsIdMyGadgetMissingPlugin();
-			$rooted_plugin_file_name =  WP_PLUGIN_DIR . '/' . JmwsIdMyGadgetMissingPlugin::IDMYGADGET_PLUGIN_FILE;
+			$rootedPluginFileName =  WP_PLUGIN_DIR . '/' . JmwsIdMyGadgetMissingPlugin::IDMYGADGET_PLUGIN_FILE;
 			$jmwsIdMyGadget->errorMessage = IDMYGADGET_UNKNOWN_ERROR;
-			if ( file_exists($rooted_plugin_file_name) )  // it's installed but probably not active
+			if ( file_exists($rootedPluginFileName) )  // it's installed but probably not active
 			{
 				if ( ! function_exists( 'get_plugins' ) )
 				{
