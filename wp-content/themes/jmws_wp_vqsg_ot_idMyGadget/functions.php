@@ -50,54 +50,9 @@ add_action( 'wp_enqueue_scripts', 'enqueue_idmygadget_css' );
  */
 function check_idMyGadget_install()
 {
-	global $jmwsIdMyGadget;
-	global $all_plugins;
-	global $jmws_idMyGadget_for_wordpress_is_installed;
-	global $jmws_idMyGadget_for_wordpress_is_active;
-	$jmws_idMyGadget_for_wordpress_is_installed= TRUE;
-	$jmws_idMyGadget_for_wordpress_is_active = TRUE;
-
-	if ( isset($jmwsIdMyGadget) )
-	{
-		if ( $jmwsIdMyGadget->isInstalled() )
-		{
-			unset( $jmwsIdMyGadget->errorMessage );
-		}
-		else
-		{
-			$linkToReadmeOnGithub =
-				'<a href="' . $jmwsIdMyGadget->getLinkToReadme() . '" class="idmygadget-error" target="_blank">' .
-					'the appropriate README.md file on github.</a>';
-			$jmwsIdMyGadget->errorMessage = IDMYGADGET_DETECTOR_NOT_INSTALLED_OPENING .
-				$linkToReadmeOnGithub . IDMYGADGET_DETECTOR_NOT_INSTALLED_CLOSING;
-		}
-	}
-	else
-	{
-		require_once 'idMyGadget/JmwsIdMyGadgetMissingPlugin.php';
-		$jmwsIdMyGadget = new JmwsIdMyGadgetMissingPlugin();
-		$rooted_plugin_file_name =  WP_PLUGIN_DIR . '/' . JmwsIdMyGadgetMissingPlugin::IDMYGADGET_PLUGIN_FILE;
-		$jmwsIdMyGadget->errorMessage = IDMYGADGET_UNKNOWN_ERROR;
-		if ( file_exists($rooted_plugin_file_name) )  // it's installed but probably not active
-		{
-			if ( ! function_exists( 'get_plugins' ) )
-			{
-				require_once ABSPATH . 'wp-admin/includes/plugin.php';
-			}
-			$all_plugins = get_plugins();
-			if ( ! is_plugin_active(JmwsIdMyGadgetMissingPlugin::IDMYGADGET_PLUGIN_FILE) )
-			{
-				$jmws_idMyGadget_for_wordpress_is_active = FALSE;
-				$jmwsIdMyGadget->errorMessage = IDMYGADGET_NOT_ACTIVE;
-			}
-		}
-		else
-		{
-			$jmws_idMyGadget_for_wordpress_is_active = FALSE;
-			$jmws_idMyGadget_for_wordpress_is_installed = FALSE;
-			$jmwsIdMyGadget->errorMessage = IDMYGADGET_NOT_INSTALLED;
-		}
-	}
+	require_once 'idMyGadget/JmwsIdMyGadgetCheckPlugin.php';
+	$jmwsIdMyGadgetCheckPlugin = new JmwsIdMyGadgetCheckPlugin();
+	$jmwsIdMyGadgetCheckPlugin->checkPlugin();
 }
 
 /**
