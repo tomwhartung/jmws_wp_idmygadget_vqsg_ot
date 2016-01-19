@@ -121,4 +121,16 @@ class JmwsIdMyGadgetMissingPlugin
 	{
 		return '?';
 	}
+
+	/**
+	 * For development only! Please remove when code is stable.
+	 * Displaying some values that can help us make sure we haven't inadvertently
+	 * broken something while we are actively working on this.
+	 * @return string
+	 */
+	public function getSanityCheckString()
+	{
+		$returnValue = '?/?/?/(module missing)';
+		return $returnValue;
+	}
 }
