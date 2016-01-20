@@ -17,7 +17,7 @@ class JmwsIdMyGadgetWpVqsgOt
 	/**
 	 * Use the $logoTitleDescription to generate the html for the header
 	 */
-	public function getHeaderHtml()
+	public static function getHeaderHtml()
 	{
 		global $jmwsIdMyGadget;
 		$logoTitleDescription = '';
@@ -42,7 +42,7 @@ class JmwsIdMyGadgetWpVqsgOt
 	 * If the idMyGadget module is not available we will use this,
 	 * which is the original code downloaded in Sept. 2015
 	 */
-	public function getLogoTitleDescriptionHtml()
+	public static function getLogoTitleDescriptionHtml()
 	{
 		$logoTitleDescription = '<h1>' .
 				'<a href="' . esc_url( home_url('/') ) . '" ' .
