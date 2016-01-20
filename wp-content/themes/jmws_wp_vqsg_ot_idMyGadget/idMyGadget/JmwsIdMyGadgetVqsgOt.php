@@ -10,6 +10,9 @@
 class JmwsIdMyGadgetVqsgOt
 {
 
+	/**
+	 * Note that you do not need to instantiate this class unless you need to call a non-static method.
+	 */
 	public function __construct()
 	{
 	}
@@ -28,7 +31,7 @@ class JmwsIdMyGadgetVqsgOt
 		}
 		else
 		{
-			$logoTitleDescription = getLogoTitleDescriptionHtml();
+			$logoTitleDescription = self::getLogoTitleDescriptionHtml();
 		}
 	
 		$headerHtml  = '';
@@ -42,7 +45,7 @@ class JmwsIdMyGadgetVqsgOt
 	 * If the idMyGadget module is not available we will use this,
 	 * which is the original code downloaded in Sept. 2015
 	 */
-	public static function getLogoTitleDescriptionHtml()
+	protected static function getLogoTitleDescriptionHtml()
 	{
 		$logoTitleDescription = '<h1>' .
 				'<a href="' . esc_url( home_url('/') ) . '" ' .
