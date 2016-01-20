@@ -3,8 +3,8 @@
  * Class to contain a generic (theme-independent) check for the module being installed and activated.
  *
  * @package Jmws
- * @subpackage Twenty_Thirteen_idMyGadget
- * @since Twenty Thirteen IdMyGadget 1.0
+ * @subpackage vqsg_ot
+ * @since 1.0
  */
 
 class JmwsIdMyGadgetCheckPlugin
