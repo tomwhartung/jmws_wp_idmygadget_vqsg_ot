@@ -7,7 +7,7 @@
  * @package Jmws
  * @since 1.0
  */
-class JmwsIdMyGadgetWpVqsgOt
+class JmwsIdMyGadgetVqsgOt
 {
 
 	public function __construct()

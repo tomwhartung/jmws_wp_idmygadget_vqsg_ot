@@ -34,7 +34,7 @@ global $jmwsIdMyGadget;
 require_once 'idMyGadget/JmwsIdMyGadgetVqsgOt.php';
 check_idMyGadget_install();
 $site_name = get_bloginfo('name' );
-$header_html = JmwsIdMyGadgetWpVqsgOt::getHeaderHtml();
+$header_html = JmwsIdMyGadgetVqsgOt::getHeaderHtml();
 ?>
 </head>
 <body <?php body_class(); ?>>
