@@ -1,15 +1,15 @@
 /* *
- * Theme Name: IdMyGadget in Our Theme
- * Theme URI: https://github.com/tomwhartung/jmws_wp_vqsg_ot_idMyGadget
- * Author: Tom W. Hartung (building on what Jessica Neuman Beck and Matt Beck did)
- * Author URI: http://www.tomwhartung.com
- * Description: Adding Device Detection to "A WordPress theme for the WordPress Visual QuickStart site"
+ * Theme Name: VQSG Our Theme with IdMyGadget
+ * Theme URI: https://tomwhartung.com
+ * Author: Tom Hartung, and Jessica Neuman Beck and Matt Beck
+ * Author URI: http://www.joomoowebsites.com
+ * Description: Starting with "Our Theme" from the book "A WordPress theme for the WordPress Visual QuickStart site," and adding idMyGadget device detection
  * Version: 1.0
- * Tags: theme options, 2 column, simple, clean, widgets, fixed width
- * Text Domain:
+ * Tags: device detection, theme options, 2 column, simple, clean, widgets
+ * Text Domain: vqsg_ot_idMyGadget
  * 
- * This theme has been designed as an example for WordPress Visual QuickStart.
-   ==================================================
+ * This theme was originally designed as an example for the book WordPress Visual QuickStart.
+ * I (tomwhartung) am adding device detection to it because it is very simple, and doing so helps me learn add device detection to more complicated WP themes.
  */
 
 body {
