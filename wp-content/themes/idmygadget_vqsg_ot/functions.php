@@ -7,9 +7,9 @@
  * @package jmws_wp_vqsg_fs_idMyGadget
  * @since 1.0
  */
-add_action( 'widgets_init', 'my_sidebar' );
+add_action( 'widgets_init', 'idmygadget_vqsg_ot_my_sidebar' );
 
-function my_sidebar() {
+function idmygadget_vqsg_ot_my_sidebar() {
 
 /* Register the 'primary' sidebar */
 	register_sidebar(
@@ -34,13 +34,13 @@ function my_sidebar() {
 /**
  * Add in the scripts and stylesheets we need for integration with IdMyGadget
  */
-function enqueue_idmygadget_css()
+function idmygadget_vqsg_ot_enqueue_idmygadget_css()
 {
 	$css_file = get_template_directory_uri() . "/idMyGadget/idMyGadget.css";
 	wp_enqueue_style( 'idMyGadget-css', $css_file );
 }
 
-add_action( 'wp_enqueue_scripts', 'enqueue_idmygadget_css' );
+add_action( 'wp_enqueue_scripts', 'idmygadget_vqsg_ot_enqueue_idmygadget_css' );
 
 /**
  * Checks for a valid idMyGadget object; if one is not present:
@@ -48,7 +48,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_idmygadget_css' );
  *   Create a "no detection" object to keep us from whitescreening, and
  *   Set an appropriate error message in the object
  */
-function check_idMyGadget_install()
+function idmygadget_vqsg_ot_check_idMyGadget_install()
 {
 	require_once 'idMyGadget/JmwsIdMyGadgetCheckPlugin.php';
 	$jmwsIdMyGadgetCheckPlugin = new JmwsIdMyGadgetCheckPlugin();
