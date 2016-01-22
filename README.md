@@ -1,4 +1,4 @@
-# jmws_wp_vqsg_ot_idMyGadget
+# jmws_wp_idmygadget_vqsg_ot
 
 This is the minimal WordPress theme built from scratch, that is available from http://www.wpvisualquickstart.com/reference/our-theme/ .
 
