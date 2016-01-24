@@ -31,6 +31,21 @@ function idmygadget_vqsg_ot_my_sidebar() {
 // Begin changes added for integration with IdMyGadget
 // ---------------------------------------------------
 //
+/**
+ * Initialize the environment as needed for this theme
+ * Specifically, if a valid idMyGadget object is not present:
+ *   Diagnose the problem,
+ *   Create a "no detection" object to keep us from whitescreening, and
+ *   Set an appropriate error message in the object
+ */
+function idmygadget_vqsg_ot_wp()
+{
+	require_once 'idMyGadget/JmwsIdMyGadgetVqsgOt.php';
+	require_once 'idMyGadget/JmwsIdMyGadgetCheckPlugin.php';
+	$jmwsIdMyGadgetCheckPlugin = new JmwsIdMyGadgetCheckPlugin();
+	$jmwsIdMyGadgetCheckPlugin->checkPlugin();
+}
+add_action( 'wp', 'idmygadget_vqsg_ot_wp' );
 
 /**
  * Add in the scripts and stylesheets we need for integration with IdMyGadget
@@ -42,16 +57,3 @@ function idmygadget_vqsg_ot_enqueue_styles()
 	wp_enqueue_style( 'idMyGadget-css' );
 }
 add_action( 'wp_enqueue_scripts', 'idmygadget_vqsg_ot_enqueue_styles' );
-
-/**
- * Checks for a valid idMyGadget object; if one is not present:
- *   Diagnose the problem,
- *   Create a "no detection" object to keep us from whitescreening, and
- *   Set an appropriate error message in the object
- */
-function idmygadget_vqsg_ot_check_idMyGadget_install()
-{
-	require_once 'idMyGadget/JmwsIdMyGadgetCheckPlugin.php';
-	$jmwsIdMyGadgetCheckPlugin = new JmwsIdMyGadgetCheckPlugin();
-	$jmwsIdMyGadgetCheckPlugin->checkPlugin();
-}
