@@ -1,15 +1,15 @@
 <?php
 /**
- * Functions added to the Our Theme ("ot") theme found in the book, WordPress, a Visual Quick Start Guide ("vqsg")
- * This code has been added specifically to support device detction
+ * Functions added to the Our Theme ("ot") theme found in the book, WordPress, a Visual Quick Start Guide ("vqsg").
+ * This code has been added specifically to support device detction.
  *
  * @author Tom W. Hartung, using the Visual Quick Start Guide's "our-theme" as a starting point
  * @package Jmws
+ * @subpackage idmygadget_vqsg_ot
  * @since 1.0
  */
 class JmwsIdMyGadgetVqsgOt
 {
-
 	/**
 	 * Note that you do not need to instantiate this class unless you need to call a non-static method.
 	 */
