@@ -31,8 +31,6 @@
 //   Call its fcn to get the html we need for the header
 //
 global $jmwsIdMyGadget;
-require_once 'idMyGadget/JmwsIdMyGadgetVqsgOt.php';
-idmygadget_vqsg_ot_check_idMyGadget_install();
 $site_name = get_bloginfo('name' );
 $header_html = JmwsIdMyGadgetVqsgOt::getHeaderHtml();
 ?>
