@@ -38,10 +38,10 @@ function idmygadget_vqsg_ot_my_sidebar() {
  *   Create a "no detection" object to keep us from whitescreening, and
  *   Set an appropriate error message in the object
  */
+require_once 'idMyGadget/JmwsIdMyGadgetVqsgOt.php';
+require_once 'idMyGadget/JmwsIdMyGadgetCheckPlugin.php';
 function idmygadget_vqsg_ot_wp()
 {
-	require_once 'idMyGadget/JmwsIdMyGadgetVqsgOt.php';
-	require_once 'idMyGadget/JmwsIdMyGadgetCheckPlugin.php';
 	$jmwsIdMyGadgetCheckPlugin = new JmwsIdMyGadgetCheckPlugin();
 	$jmwsIdMyGadgetCheckPlugin->checkPlugin();
 }
