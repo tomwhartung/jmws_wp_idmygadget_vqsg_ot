@@ -29,10 +29,8 @@ img.logo-file-phone {
  * Styles used for tablets
  */
 img.logo-file-tablet {
-	display: inline;
-	float: left;
-	height: 100px;
-	width: 100px;
+	display: block;
+	width: 100%;
 }
 /*
  * Styles used for the error message
