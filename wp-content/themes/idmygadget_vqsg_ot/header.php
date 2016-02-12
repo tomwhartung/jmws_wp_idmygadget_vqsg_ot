@@ -20,13 +20,12 @@
 //   Call its fcn to get the html we need for the header
 //
 global $jmwsIdMyGadget;
+$site_title_or_name = $jmwsIdMyGadget->getSiteTitleOrName();
 ?>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-	<title>
-		<?php bloginfo('name'); ?><?php wp_title(); ?>
-	</title>
+	<title><?php echo $site_title_or_name; ?></title>
 
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
@@ -34,7 +33,7 @@ global $jmwsIdMyGadget;
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<div id="page" <?php echo $jmwsIdMyGadget->jqmDataRole['page'] ?> data-title="vqsg_ot:">
+	<div id="page" <?php echo $jmwsIdMyGadget->jqmDataRole['page'] ?> data-title="<?php echo $site_title_or_name; ?>">
 		<?php if( has_nav_menu('phone-header-nav') && $jmwsIdMyGadget->phoneHeaderNavThisDevice ) : ?>
 			<nav data-role="navbar">
 				<?php wp_nav_menu( array( 'theme_location' => 'phone-header-nav', 'container' => false) ); ?>
