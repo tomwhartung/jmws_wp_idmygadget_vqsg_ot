@@ -133,4 +133,12 @@ class JmwsIdMyGadgetMissingPlugin
 		$returnValue = '?/?/?/(module missing)';
 		return $returnValue;
 	}
+
+	/**
+	 * Return the site name (since the title is not available)
+	 */
+	public function getSiteTitleOrName()
+	{
+		return get_bloginfo('name');
+	}
 }
