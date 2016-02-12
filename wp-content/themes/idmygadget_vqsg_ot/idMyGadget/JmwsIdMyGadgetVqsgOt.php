@@ -50,7 +50,7 @@ class JmwsIdMyGadgetVqsgOt
 		$logoTitleDescription = '<h1>' .
 				'<a href="' . esc_url( home_url('/') ) . '" ' .
 				'title="' . esc_attr( get_bloginfo('name','display') ) . '" ' .
-				'rel="home">' . $site_name . '</a></h1>';
+				'rel="home">' . get_bloginfo('name' ) . '</a></h1>';
 		$logoTitleDescription .= '<h4>' . get_bloginfo('description') . '</h4>';
 		return $logoTitleDescription;
 	}
