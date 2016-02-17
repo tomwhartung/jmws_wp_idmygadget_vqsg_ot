@@ -95,7 +95,12 @@ a:active { text-decoration: underline }
     float: left;
 }
 
-body.home .entry h2 { display: none }
+/*
+ * Why do they want to hide the article headings?  Why did I not notice this sooner?
+ * Omfg holy heart attack city I thought I did something wrong!?!
+ *
+ * body.home .entry h2 { display: none }
+ */
 
 body.home .entry,
 entry-body p {
