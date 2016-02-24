@@ -2,6 +2,29 @@
  * Styles for use by idMyGadget code
  */
 /*
+ * For all devices
+ */
+.site-name-phone,
+.site-name-tablet,
+.site-name-desktop {
+	display: inline;
+}
+.site-title-phone,
+.site-title-tablet,
+.site-title-desktop {
+	display: inline;
+}
+img#hamburger-icon-image-left,
+canvas#hamburger-icon-canvas-left {
+	display: inline;
+	float: left;
+}
+img#hamburger-icon-image-right,
+canvas#hamburger-icon-canvas-right {
+	display: inline;
+	float: right;
+}
+/*
  * Styles used for phones
  */
 img.logo-file-phone {
@@ -13,13 +36,11 @@ img.logo-file-phone {
 	width: 50px;
 }
 .site-name-phone {
-	display: inline;
 	text-align: left;
 	vertical-align: left;
 }
 .site-title-phone,
 .site-description-phone {
-	display: block;
 	margin: 0.5em;
 	padding: 0.5em;
 	text-align: left;
