@@ -9,7 +9,7 @@
  * Text Domain: idmygadget_vqsg_ot
  * 
  * This theme was originally designed as an example for the book WordPress Visual QuickStart Guide ("vqsg"), and was named Our Theme ("ot").
- * I (tomwhartung) am adding device detection to it because it is very simple, and doing so helps me learn add device detection to more complicated WP themes.
+ * I (tomwhartung) am adding device detection to it because it is very simple, and doing so helps me learn how to add device detection to more complicated WP themes.
  */
 
 body {
@@ -52,7 +52,6 @@ a:active { text-decoration: underline }
     margin: 0px auto;
     color: #333;
     background: #fff;
-    border-top: 20px solid red;
 }
 
 .sidebar {
