@@ -15,7 +15,10 @@
 
  */
 get_header();
-get_sidebar();
+if ( is_active_sidebar('primary') )
+{
+	get_sidebar('primary');
+}
 global $jmwsIdMyGadget;
 ?>
 <div id="content" <?php echo $jmwsIdMyGadget->jqmDataRole['content'] ?>>
