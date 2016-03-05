@@ -7,11 +7,14 @@
  * @package jmws_wp_vqsg_fs_idMyGadget
  * @since 1.0
  */
-add_action( 'widgets_init', 'idmygadget_vqsg_ot_my_sidebar' );
+/**
+ * Register the sidebars
+ * The 'primary' sidebar is part of the original version of "Our Theme"
+ * The 'sidebar-phone' 'sidebar-tablet' and 'sidebar-desktop' sidebars rely on idMyGadget
+ */
 
-function idmygadget_vqsg_ot_my_sidebar() {
-
-/* Register the 'primary' sidebar */
+function idmygadget_vqsg_ot_my_sidebar()
+{
 	register_sidebar(
 		array(
 			'id' => 'primary',
@@ -25,6 +28,7 @@ function idmygadget_vqsg_ot_my_sidebar() {
 	);
 
 }
+add_action( 'widgets_init', 'idmygadget_vqsg_ot_my_sidebar' );
 
 //
 // ---------------------------------------------------
