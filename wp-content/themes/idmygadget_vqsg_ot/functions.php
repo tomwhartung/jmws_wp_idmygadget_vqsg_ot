@@ -18,8 +18,8 @@ function idmygadget_vqsg_ot_my_sidebar()
 	register_sidebar(
 		array(
 			'id' => 'primary',
-			'name' => __( 'Primary' ),
-			'description' => __( 'This is the primary sidebar.' ),
+			'name' => __( 'Primary Sidebar' ),
+			'description' => __( 'The primary sidebar is visible on all devices.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title">',
@@ -27,6 +27,17 @@ function idmygadget_vqsg_ot_my_sidebar()
 		)
 	);
 
+	register_sidebar(
+		array(
+			'id' => 'sidebar-phone',
+			'name' => __( 'Sidebar: Phones Only' ),
+			'description' => __( 'Sidebar visible on phones only.' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
 }
 add_action( 'widgets_init', 'idmygadget_vqsg_ot_my_sidebar' );
 
