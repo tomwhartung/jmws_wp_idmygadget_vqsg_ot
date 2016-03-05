@@ -18,11 +18,15 @@ img#hamburger-icon-image-left,
 canvas#hamburger-icon-canvas-left {
 	display: inline;
 	float: left;
+	margin: 0.25em;
+	padding: 0.25em;
 }
 img#hamburger-icon-image-right,
 canvas#hamburger-icon-canvas-right {
 	display: inline;
 	float: right;
+	margin: 0.25em;
+	padding: 0.25em;
 }
 /*
  * Styles used for phones
