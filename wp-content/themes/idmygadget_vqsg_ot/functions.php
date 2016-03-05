@@ -38,6 +38,30 @@ function idmygadget_vqsg_ot_widgets_init()
 			'after_title' => '</h3>'
 		)
 	);
+
+	register_sidebar(
+		array(
+			'id' => 'sidebar-tablet',
+			'name' => __( 'Sidebar: Tablets Only' ),
+			'description' => __( 'Sidebar visible on tablets only.' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id' => 'sidebar-desktop',
+			'name' => __( 'Sidebar: Desktops Only' ),
+			'description' => __( 'Sidebar visible on desktops only.' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		)
+	);
 }
 add_action( 'widgets_init', 'idmygadget_vqsg_ot_widgets_init' );
 
