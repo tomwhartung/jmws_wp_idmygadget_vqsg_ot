@@ -29,7 +29,7 @@ function idmygadget_vqsg_ot_widgets_init()
 
 	register_sidebar(
 		array(
-			'id' => 'sidebar-phone',
+			'id' => 'sidebar-phones',
 			'name' => __( 'Sidebar: Phones Only' ),
 			'description' => __( 'Sidebar visible on phones only.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -41,7 +41,7 @@ function idmygadget_vqsg_ot_widgets_init()
 
 	register_sidebar(
 		array(
-			'id' => 'sidebar-tablet',
+			'id' => 'sidebar-tablets',
 			'name' => __( 'Sidebar: Tablets Only' ),
 			'description' => __( 'Sidebar visible on tablets only.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -53,7 +53,7 @@ function idmygadget_vqsg_ot_widgets_init()
 
 	register_sidebar(
 		array(
-			'id' => 'sidebar-desktop',
+			'id' => 'sidebar-desktops',
 			'name' => __( 'Sidebar: Desktops Only' ),
 			'description' => __( 'Sidebar visible on desktops only.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
