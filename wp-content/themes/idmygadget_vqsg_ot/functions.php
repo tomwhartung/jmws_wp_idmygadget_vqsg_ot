@@ -13,7 +13,7 @@
  * The 'sidebar-phone' 'sidebar-tablet' and 'sidebar-desktop' sidebars rely on idMyGadget
  */
 
-function idmygadget_vqsg_ot_my_sidebar()
+function idmygadget_vqsg_ot_widgets_init()
 {
 	register_sidebar(
 		array(
@@ -39,7 +39,7 @@ function idmygadget_vqsg_ot_my_sidebar()
 		)
 	);
 }
-add_action( 'widgets_init', 'idmygadget_vqsg_ot_my_sidebar' );
+add_action( 'widgets_init', 'idmygadget_vqsg_ot_widgets_init' );
 
 //
 // ---------------------------------------------------
