@@ -1,5 +1,7 @@
 <?php get_header();?>
-<?php get_sidebar(); ?>
+<?php if ( is_active_sidebar('primary') ) : ?>
+	<?php get_sidebar('primary'); ?>
+<?php endif; ?>
 <?php global $jmwsIdMyGadget; ?>
 <div id="content" <?php echo $jmwsIdMyGadget->jqmDataRole['content'] ?>>
 	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
