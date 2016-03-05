@@ -15,11 +15,24 @@
 
  */
 get_header();
+global $jmwsIdMyGadget;
 if ( is_active_sidebar('primary') )
 {
 	get_sidebar('primary');
 }
-global $jmwsIdMyGadget;
+if ( $jmwsIdMyGadget->isPhone() )
+{
+	error_log( 'YES!  On a phone!!' );
+	// if ( is_active_sidebar('sidebar-phones') )
+	// {
+		get_sidebar('phones');
+		error_log( 'And there should be a sidebar-phone visible now!!!!' );
+	// }
+}
+else
+{
+	error_log( 'not a phone' );
+}
 ?>
 <div id="content" <?php echo $jmwsIdMyGadget->jqmDataRole['content'] ?>>
 <!--START THE LOOP-->
