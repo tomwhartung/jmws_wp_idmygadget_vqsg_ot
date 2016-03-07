@@ -16,16 +16,8 @@
  */
 get_header();
 global $jmwsIdMyGadget;
-$include_sidebar = FALSE;
-if ( is_active_sidebar('primary') )
-{
-	$include_sidebar = TRUE;
-}
-else
-{
-	$include_sidebar = $jmwsIdMyGadget->getIncludeSidebar();
-}
-if ( $include_sidebar )
+$jmwsIdMyGadget->setIncludeSidebarVariables();
+if ( $jmwsIdMyGadget->includeSidebar )
 {
 	get_sidebar();
 }
