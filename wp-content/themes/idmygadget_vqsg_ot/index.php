@@ -27,7 +27,7 @@ else
 }
 if ( $include_sidebar )
 {
-	get_sidebar('all');
+	get_sidebar();
 }
 ?>
 <div id="content" <?php echo $jmwsIdMyGadget->jqmDataRole['content'] ?>>
