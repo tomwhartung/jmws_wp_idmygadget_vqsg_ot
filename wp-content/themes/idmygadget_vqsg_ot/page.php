@@ -12,7 +12,7 @@ else
 ?>
 <?php get_header();?>
 <?php if ( $include_sidebar ) : ?>
-	<?php get_sidebar('all'); ?>
+	<?php get_sidebar(); ?>
 <?php endif; ?>
 <?php global $jmwsIdMyGadget; ?>
 <div id="content" <?php echo $jmwsIdMyGadget->jqmDataRole['content'] ?>>
