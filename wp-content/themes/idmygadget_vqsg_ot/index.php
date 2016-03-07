@@ -16,30 +16,38 @@
  */
 get_header();
 global $jmwsIdMyGadget;
+$include_sidebar = FALSE;
 if ( is_active_sidebar('primary') )
 {
-	get_sidebar('primary');
-}
-if ( $jmwsIdMyGadget->isPhone() )
-{
-	if ( is_active_sidebar('sidebar-phones') )
-	{
-		get_sidebar('phones');
-	}
-}
-else if ( $jmwsIdMyGadget->isTablet() )
-{
-	if ( is_active_sidebar('sidebar-tablets') )
-	{
-		get_sidebar('tablets');
-	}
+	$include_sidebar = TRUE;
 }
 else
 {
-	if ( is_active_sidebar('sidebar-desktops') )
+	if ( $jmwsIdMyGadget->isPhone() )
 	{
-		get_sidebar('desktops');
+		if ( is_active_sidebar('sidebar-phones') )
+		{
+			$include_sidebar = TRUE;
+		}
 	}
+	else if ( $jmwsIdMyGadget->isTablet() )
+	{
+		if ( is_active_sidebar('sidebar-tablets') )
+		{
+			$include_sidebar = TRUE;
+		}
+	}
+	else
+	{
+		if ( is_active_sidebar('sidebar-desktops') )
+		{
+			$include_sidebar = TRUE;
+		}
+	}
+}
+if ( $include_sidebar )
+{
+	get_sidebar('all');
 }
 ?>
 <div id="content" <?php echo $jmwsIdMyGadget->jqmDataRole['content'] ?>>
