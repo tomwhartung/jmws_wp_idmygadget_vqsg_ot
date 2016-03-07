@@ -141,4 +141,25 @@ class JmwsIdMyGadgetMissingPlugin
 	{
 		return get_bloginfo('name');
 	}
+	/**
+	 * Because we are not using device detection, assume we are on a desktop PC
+	 */
+	public function isPhone()
+	{
+		return FALSE;
+	}
+	/**
+	 * Because we are not using device detection, assume we are on a desktop PC
+	 */
+	public function isTablet()
+	{
+		return FALSE;
+	}
+	/**
+	 * Because we are not using device detection, assume we are on a desktop PC
+	 */
+	public function isDesktop()
+	{
+		return TRUE;
+	}
 }
