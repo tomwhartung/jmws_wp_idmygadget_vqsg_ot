@@ -23,27 +23,7 @@ if ( is_active_sidebar('primary') )
 }
 else
 {
-	if ( $jmwsIdMyGadget->isPhone() )
-	{
-		if ( is_active_sidebar('sidebar-phones') )
-		{
-			$include_sidebar = TRUE;
-		}
-	}
-	else if ( $jmwsIdMyGadget->isTablet() )
-	{
-		if ( is_active_sidebar('sidebar-tablets') )
-		{
-			$include_sidebar = TRUE;
-		}
-	}
-	else
-	{
-		if ( is_active_sidebar('sidebar-desktops') )
-		{
-			$include_sidebar = TRUE;
-		}
-	}
+	$include_sidebar = $jmwsIdMyGadget->getIncludeSidebar();
 }
 if ( $include_sidebar )
 {
