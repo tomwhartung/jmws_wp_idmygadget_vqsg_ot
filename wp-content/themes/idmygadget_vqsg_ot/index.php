@@ -15,12 +15,7 @@
 
  */
 get_header();
-global $jmwsIdMyGadget;
-$jmwsIdMyGadget->setIncludeSidebarVariables();
-if ( $jmwsIdMyGadget->includeSidebar )
-{
-	get_sidebar();
-}
+get_sidebar();
 ?>
 <div id="content" <?php echo $jmwsIdMyGadget->jqmDataRole['content'] ?>>
 <!--START THE LOOP-->
