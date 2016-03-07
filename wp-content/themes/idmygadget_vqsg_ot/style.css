@@ -65,14 +65,17 @@ a:active { text-decoration: underline }
 }
 
     .sidebar a { font-weight: normal }
+    .sidebar div a { font-weight: normal }
 
-    .sidebar ul {
+    .sidebar ul,
+    .sidebar div ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
     }
 
-    .sidebar li a {
+    .sidebar li a,
+    .sidebar div li a {
         display: block;
         padding: 5px 10px;
         border-top: 1px dotted #fff;
@@ -82,7 +85,8 @@ a:active { text-decoration: underline }
         letter-spacing: 1px;
     }
 
-    .sidebar li a:hover {
+    .sidebar li a:hover,
+    .sidebar div li a:hover {
         background: #fff;
         text-decoration: none;
     }
