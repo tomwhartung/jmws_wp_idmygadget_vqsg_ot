@@ -36,10 +36,10 @@ else if ( $jmwsIdMyGadget->isTablet() )
 }
 else
 {
-	if ( is_active_sidebar('sidebar-desktops') )
-	{
+//	if ( is_active_sidebar('sidebar-desktops') )
+//	{
 		get_sidebar('desktops');
-	}
+//	}
 }
 ?>
 <div id="content" <?php echo $jmwsIdMyGadget->jqmDataRole['content'] ?>>
