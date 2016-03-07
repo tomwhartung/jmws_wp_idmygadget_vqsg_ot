@@ -19,7 +19,7 @@ function idmygadget_vqsg_ot_widgets_init()
 		array(
 			'name' => __( 'Primary Sidebar', 'idmygadget_vqsg_ot' ),
 			'id' => 'primary',
-			'description' => __( 'The primary sidebar is visible on all devices.' ),
+			'description' => __( 'The primary sidebar is visible on all devices.', 'idmygadget_vqsg_ot' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title">',
@@ -31,7 +31,7 @@ function idmygadget_vqsg_ot_widgets_init()
 		array(
 			'name' => __( 'Sidebar: Phones Only', 'idmygadget_vqsg_ot' ),
 			'id' => 'sidebar-phones',
-			'description' => __( 'Sidebar visible on phones only.' ),
+			'description' => __( 'Sidebar visible on phones only.', 'idmygadget_vqsg_ot' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title">',
@@ -43,7 +43,7 @@ function idmygadget_vqsg_ot_widgets_init()
 		array(
 			'name' => __( 'Sidebar: Tablets Only', 'idmygadget_vqsg_ot' ),
 			'id' => 'sidebar-tablets',
-			'description' => __( 'Sidebar visible on tablets only.' ),
+			'description' => __( 'Sidebar visible on tablets only.', 'idmygadget_vqsg_ot' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title">',
@@ -55,7 +55,7 @@ function idmygadget_vqsg_ot_widgets_init()
 		array(
 			'name' => __( 'Sidebar: Desktops Only', 'idmygadget_vqsg_ot' ),
 			'id' => 'sidebar-desktops',
-			'description' => __( 'Sidebar visible on desktops only.' ),
+			'description' => __( 'Sidebar visible on desktops only.', 'idmygadget_vqsg_ot' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title">',
