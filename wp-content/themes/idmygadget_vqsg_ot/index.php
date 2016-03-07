@@ -22,16 +22,24 @@ if ( is_active_sidebar('primary') )
 }
 if ( $jmwsIdMyGadget->isPhone() )
 {
-	error_log( 'YES!  On a phone!!' );
-	// if ( is_active_sidebar('sidebar-phones') )
-	// {
+	if ( is_active_sidebar('sidebar-phones') )
+	{
 		get_sidebar('phones');
-		error_log( 'And there should be a sidebar-phone visible now!!!!' );
-	// }
+	}
+}
+else if ( $jmwsIdMyGadget->isTablet() )
+{
+	if ( is_active_sidebar('sidebar-tablets') )
+	{
+		get_sidebar('tablets');
+	}
 }
 else
 {
-	error_log( 'not a phone' );
+	if ( is_active_sidebar('sidebar-desktops') )
+	{
+		get_sidebar('desktops');
+	}
 }
 ?>
 <div id="content" <?php echo $jmwsIdMyGadget->jqmDataRole['content'] ?>>
