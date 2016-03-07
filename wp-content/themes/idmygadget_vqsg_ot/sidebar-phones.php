@@ -1,3 +1,3 @@
 <div id="sidebar-phones" class="sidebar">
-	<?php dynamic_sidebar( 'primary' ); ?>
+	<?php dynamic_sidebar( 'sidebar-phones' ); ?>
 </div>
