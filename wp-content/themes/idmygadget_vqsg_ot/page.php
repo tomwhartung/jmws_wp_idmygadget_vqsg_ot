@@ -1,6 +1,18 @@
+<?php
+global $jmwsIdMyGadget;
+$include_sidebar = FALSE;
+if ( is_active_sidebar('primary') )
+{
+	$include_sidebar = TRUE;
+}
+else
+{
+	$include_sidebar = $jmwsIdMyGadget->getIncludeSidebar();
+}
+?>
 <?php get_header();?>
-<?php if ( is_active_sidebar('primary') ) : ?>
-	<?php get_sidebar('primary'); ?>
+<?php if ( $include_sidebar ) : ?>
+	<?php get_sidebar('all'); ?>
 <?php endif; ?>
 <?php global $jmwsIdMyGadget; ?>
 <div id="content" <?php echo $jmwsIdMyGadget->jqmDataRole['content'] ?>>
