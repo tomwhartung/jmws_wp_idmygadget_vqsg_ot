@@ -28,20 +28,20 @@ else
 
 <div class="sidebar">
 	<?php if ( is_active_sidebar('primary') ) : ?>
-		<div id="sidebar-primary" class="sidebar">
+		<div id="sidebar-primary">
 			<?php dynamic_sidebar( 'primary' ); ?>
 		</div>
 	<?php endif; ?>
 	<?php if ( $include_sidebar_phones ) : ?>
-		<div id="sidebar-phones" class="sidebar">
+		<div id="sidebar-phones">
 			<?php dynamic_sidebar( 'sidebar-phones' ); ?>
 		</div>
 	<?php elseif ( $include_sidebar_tablets ) : ?>
-		<div id="sidebar-tablets" class="sidebar">
+		<div id="sidebar-tablets">
 			<?php dynamic_sidebar( 'sidebar-tablets' ); ?>
 		</div>
 	<?php elseif ( $include_sidebar_desktops ) : ?>
-		<div id="sidebar-desktops" class="sidebar">
+		<div id="sidebar-desktops">
 			<?php dynamic_sidebar( 'sidebar-desktops' ); ?>
 		</div>
 	<?php endif; ?>
