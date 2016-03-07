@@ -1,6 +1,6 @@
 <?php
 global $jmwsIdMyGadget;
-$jmwsIdMyGadget->setIncludeSidebarVariables();
+$jmwsIdMyGadget->setIncludeSidebarVariables('primary');
 ?>
 <?php if ( $jmwsIdMyGadget->includeSidebar ) : ?>
 	<div class="sidebar">
