@@ -43,12 +43,9 @@ $site_title_or_name = $jmwsIdMyGadget->getSiteTitleOrName();
 		<?php
 			echo JmwsIdMyGadgetVqsgOt::getHeaderHtml(); // includes hamburger menu icons as necessary
 		?>
-		<?php
-			if (isset($jmwsIdMyGadget->errorMessage) )
-			{
-				echo $jmwsIdMyGadget->errorMessage;
-			}
-		?>
+		<?php if (isset($jmwsIdMyGadget->errorMessage) ) : ?>
+			<?php echo $jmwsIdMyGadget->errorMessage; ?>
+		<?php endif; ?>
 		<div class="debug">
 			<?php print $jmwsIdMyGadget->getSanityCheckString(); ?>
 		</div> <!-- .debug -->
