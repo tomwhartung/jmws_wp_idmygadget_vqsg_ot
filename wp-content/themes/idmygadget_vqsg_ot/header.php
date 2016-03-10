@@ -45,6 +45,17 @@ $site_title_or_name = $jmwsIdMyGadget->getSiteTitleOrName();
 		?>
 		<?php if (isset($jmwsIdMyGadget->errorMessage) ) : ?>
 			<?php echo $jmwsIdMyGadget->errorMessage; ?>
+		<?php else : ?>
+			<?php if ( $jmwsIdMyGadget->hamburgerIconLeftOnThisDevice ) : ?>
+				<div data-role="page" id="phone-burger-menu-left">
+					<?php wp_nav_menu( array( 'theme_location' => 'hamburger-menu-left', 'container' => false) ); ?>
+				</div>
+			<?php endif; ?>
+			<?php if ( $jmwsIdMyGadget->hamburgerIconRightOnThisDevice ) : ?>
+				<div data-role="page" id="phone-burger-menu-right">
+					<?php wp_nav_menu( array( 'theme_location' => 'hamburger-menu-right', 'container' => false) ); ?>
+				</div>
+			<?php endif; ?>
 		<?php endif; ?>
 		<div class="debug">
 			<?php print $jmwsIdMyGadget->getSanityCheckString(); ?>
