@@ -52,8 +52,7 @@ $site_title_or_name = $jmwsIdMyGadget->getSiteTitleOrName();
 						<h2>LEFT HEADER</h2>
 					</div>
 					<div role="main" class="ui-content">
-						<p>LEFT MAIN UI CONTENT (soon to be a menu I HOPE)</p>
-						<?php // wp_nav_menu( array( 'theme_location' => 'hamburger-menu-left', 'container' => false) ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'hamburger-menu-left', 'container' => false) ); ?>
 					</div>
 				</div>
 			<?php endif; ?>
@@ -63,8 +62,7 @@ $site_title_or_name = $jmwsIdMyGadget->getSiteTitleOrName();
 						<h2>RIGHT HEADER</h2>
 					</div>
 					<div role="main" class="ui-content">
-						<p>RIGHT MAIN UI CONTENT (soon to be a menu I HOPE)</p>
-						<?php // wp_nav_menu( array( 'theme_location' => 'hamburger-menu-right', 'container' => false) ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'hamburger-menu-right', 'container' => false) ); ?>
 					</div>
 				</div>
 			<?php endif; ?>
