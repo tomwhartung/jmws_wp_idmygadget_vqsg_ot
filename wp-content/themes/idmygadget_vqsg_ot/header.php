@@ -71,7 +71,7 @@ $site_title_or_name = $jmwsIdMyGadget->getSiteTitleOrName();
 		<?php endif; ?>
 		<div class="debug">
 			<div><a href="#popupPage" data-rel="popup">Open popup</a></div>
-			<div><a href="#dialogPage" data-rel="dialog">Open dialog</a></div>
+			<div><a href="#dialogPage">Open dialog</a></div>
 			<?php print $jmwsIdMyGadget->getSanityCheckString(); ?>
 			<div data-role="popup" id="popupPage">
 				<div data-role="header">
@@ -81,7 +81,7 @@ $site_title_or_name = $jmwsIdMyGadget->getSiteTitleOrName();
 					<p>I am a popup, not a dialog</p>
 				</div>
 			</div>
-			<div data-role="dialog" id="dialogPage">
+			<div data-role="page" data-dialog="true" id="dialogPage">
 				<div data-role="header">
 					<h2>Dialog</h2>
 				</div>
