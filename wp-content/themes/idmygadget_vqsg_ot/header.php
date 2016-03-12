@@ -49,14 +49,22 @@ $site_title_or_name = $jmwsIdMyGadget->getSiteTitleOrName();
 			<?php if ( $jmwsIdMyGadget->hamburgerIconLeftOnThisDevice ) : ?>
 				<div data-role="popup" id="idmg-hamburger-menu-left" data-position-to="window">
 					<div role="main" class="ui-content">
-						<?php wp_nav_menu( array( 'theme_location' => 'hamburger-menu-left', 'container' => false) ); ?>
+						<?php wp_nav_menu( array(
+									'menu' => 'hamburger-icon-left-nav',
+									'theme_location' => 'hamburger-menu-left',
+									'container' => false,
+							    ) ); ?>
 					</div>
 				</div>
 			<?php endif; ?>
 			<?php if ( $jmwsIdMyGadget->hamburgerIconRightOnThisDevice ) : ?>
 				<div data-role="popup" id="idmg-hamburger-menu-right" data-position-to="window">
 					<div role="main" class="ui-content">
-						<?php wp_nav_menu( array( 'theme_location' => 'hamburger-menu-right', 'container' => false) ); ?>
+						<?php wp_nav_menu( array(
+									'menu' => 'hamburger-icon-right-nav',
+									'theme_location' => 'hamburger-menu-right',
+									'container' => false,
+							    ) ); ?>
 					</div>
 				</div>
 			<?php endif; ?>
