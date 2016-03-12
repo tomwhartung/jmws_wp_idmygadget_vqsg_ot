@@ -47,13 +47,25 @@ $site_title_or_name = $jmwsIdMyGadget->getSiteTitleOrName();
 			<?php echo $jmwsIdMyGadget->errorMessage; ?>
 		<?php else : ?>
 			<?php if ( $jmwsIdMyGadget->hamburgerIconLeftOnThisDevice ) : ?>
-				<div data-role="page" id="hamburger-menu-left">
-					<?php wp_nav_menu( array( 'theme_location' => 'hamburger-menu-left', 'container' => false) ); ?>
+				<div data-role="page" id="idmg-hamburger-menu-left">
+					<div data-role="header">
+						<h2>LEFT HEADER</h2>
+					</div>
+					<div role="main" class="ui-content">
+						<p>LEFT MAIN UI CONTENT (soon to be a menu I HOPE)</p>
+						<?php // wp_nav_menu( array( 'theme_location' => 'hamburger-menu-left', 'container' => false) ); ?>
+					</div>
 				</div>
 			<?php endif; ?>
 			<?php if ( $jmwsIdMyGadget->hamburgerIconRightOnThisDevice ) : ?>
-				<div data-role="page" id="hamburger-menu-right">
-					<?php wp_nav_menu( array( 'theme_location' => 'hamburger-menu-right', 'container' => false) ); ?>
+				<div data-role="popup" id="idmg-hamburger-menu-right" data-position-to="window">
+					<div data-role="header">
+						<h2>RIGHT HEADER</h2>
+					</div>
+					<div role="main" class="ui-content">
+						<p>RIGHT MAIN UI CONTENT (soon to be a menu I HOPE)</p>
+						<?php // wp_nav_menu( array( 'theme_location' => 'hamburger-menu-right', 'container' => false) ); ?>
+					</div>
 				</div>
 			<?php endif; ?>
 		<?php endif; ?>
