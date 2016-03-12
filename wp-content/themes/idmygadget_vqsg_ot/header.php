@@ -47,7 +47,7 @@ $site_title_or_name = $jmwsIdMyGadget->getSiteTitleOrName();
 			<?php echo $jmwsIdMyGadget->errorMessage; ?>
 		<?php else : ?>
 			<?php if ( $jmwsIdMyGadget->hamburgerIconLeftOnThisDevice ) : ?>
-				<div data-role="page" id="idmg-hamburger-menu-left">
+				<div data-role="popup" id="idmg-hamburger-menu-left" data-position-to="window">
 					<div data-role="header">
 						<h2>LEFT HEADER</h2>
 					</div>
