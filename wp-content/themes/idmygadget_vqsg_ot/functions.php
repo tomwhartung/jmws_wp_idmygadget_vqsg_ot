@@ -91,11 +91,10 @@ add_action( 'wp', 'idmygadget_vqsg_ot_wp' );
  */
 function idmygadget_vqsg_ot_init()
 {
-	global $theme_object_stylesheet;   // aka. the theme "name"
-	register_nav_menu('phone-header-nav', __( 'Phone Header Nav', $theme_object_stylesheet ));
-	register_nav_menu('phone-footer-nav', __( 'Phone Footer Nav', $theme_object_stylesheet ));
-	register_nav_menu('hamburger-icon-left-nav', __( 'Hamburger Icon Left Nav', $theme_object_stylesheet ));
-	register_nav_menu('hamburger-icon-right-nav', __( 'Hamburger Icon Right Nav', $theme_object_stylesheet ));
+	register_nav_menu('phone-header-nav', __( 'Phone Header Nav', 'idmygadget_vqsg_ot' ));
+	register_nav_menu('phone-footer-nav', __( 'Phone Footer Nav', 'idmygadget_vqsg_ot' ));
+	register_nav_menu('hamburger-icon-left-nav', __( 'Hamburger Icon Left Nav', 'idmygadget_vqsg_ot' ));
+	register_nav_menu('hamburger-icon-right-nav', __( 'Hamburger Icon Right Nav', 'idmygadget_vqsg_ot' ));
 }
 add_action( 'init', 'idmygadget_vqsg_ot_init' );
 
