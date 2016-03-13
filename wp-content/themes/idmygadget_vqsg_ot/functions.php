@@ -87,6 +87,19 @@ function idmygadget_vqsg_ot_wp()
 add_action( 'wp', 'idmygadget_vqsg_ot_wp' );
 
 /**
+ * Set up the theme locations for the phone and hamburger icon nav menus
+ */
+function idmygadget_vqsg_ot_init()
+{
+	global $theme_object_stylesheet;   // aka. the theme "name"
+	register_nav_menu('phone-header-nav', __( 'Phone Header Nav', $theme_object_stylesheet ));
+	register_nav_menu('phone-footer-nav', __( 'Phone Footer Nav', $theme_object_stylesheet ));
+	register_nav_menu('hamburger-icon-left-nav', __( 'Hamburger Icon Left Nav', $theme_object_stylesheet ));
+	register_nav_menu('hamburger-icon-right-nav', __( 'Hamburger Icon Right Nav', $theme_object_stylesheet ));
+}
+add_action( 'init', 'idmygadget_vqsg_ot_init' );
+
+/**
  * Add in the scripts and stylesheets we need for integration with IdMyGadget
  */
 function idmygadget_vqsg_ot_enqueue_styles()
