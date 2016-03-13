@@ -50,8 +50,7 @@ $site_title_or_name = $jmwsIdMyGadget->getSiteTitleOrName();
 				<div data-role="popup" id="idmg-hamburger-menu-left" data-position-to="window">
 					<div role="main" class="ui-content">
 						<?php wp_nav_menu( array(
-									'menu' => 'hamburger-icon-left-nav',
-									'theme_location' => 'hamburger-menu-left',
+									'theme_location' => 'hamburger-icon-left-nav',
 									'container' => false,
 							    ) ); ?>
 					</div>
@@ -61,8 +60,7 @@ $site_title_or_name = $jmwsIdMyGadget->getSiteTitleOrName();
 				<div data-role="popup" id="idmg-hamburger-menu-right" data-position-to="window">
 					<div role="main" class="ui-content">
 						<?php wp_nav_menu( array(
-									'menu' => 'hamburger-icon-right-nav',
-									'theme_location' => 'hamburger-menu-right',
+									'theme_location' => 'hamburger-icon-right-nav',
 									'container' => false,
 							    ) ); ?>
 					</div>
