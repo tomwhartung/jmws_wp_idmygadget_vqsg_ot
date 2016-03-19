@@ -116,3 +116,27 @@ function idmygadget_vqsg_ot_enqueue_styles()
 	wp_enqueue_style( 'idMyGadget-css' );
 }
 add_action( 'wp_enqueue_scripts', 'idmygadget_vqsg_ot_enqueue_styles' );
+/**
+ * Add the SITE JavaScript files
+ * Reference:
+ *   http://wordpress.stackexchange.com/questions/82490/when-should-i-use-wp-register-script-with-wp-enqueue-script-vs-just-wp-enque
+ */
+function idmygadget_vqsg_ot_enqueue_scripts()
+{
+	global $jmwsIdMyGadget;
+
+	if ( $jmwsIdMyGadget->usingJQueryMobile )
+	{
+		wp_register_script( 'jquerymobile-js', JmwsIdMyGadget::JQUERY_MOBILE_JS_URL, array('jquery') );
+		wp_enqueue_script( 'jquerymobile-js' );
+		if ( $jmwsIdMyGadget->hamburgerIconLeftOnThisDevice ||
+		     $jmwsIdMyGadget->hamburgerIconRightOnThisDevice )
+		{
+			wp_register_script( 'hamburgerMenuIcon-js',
+					 IDMYGADGET_PLUGIN_URL . DIRECTORY_SEPARATOR . 'idMyGadget/hamburgerMenuIcon.js' );
+			wp_enqueue_script( 'hamburgerMenuIcon-js' );
+		}
+	}
+}
+add_action( 'wp_enqueue_scripts', 'idmygadget_vqsg_ot_enqueue_scripts' );
+
