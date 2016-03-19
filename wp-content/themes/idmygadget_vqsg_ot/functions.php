@@ -103,6 +103,14 @@ add_action( 'init', 'idmygadget_vqsg_ot_init' );
  */
 function idmygadget_vqsg_ot_enqueue_styles()
 {
+	global $jmwsIdMyGadget;
+
+	if ( $jmwsIdMyGadget->usingJQueryMobile )
+	{
+		wp_register_style( 'jquerymobile-css', JmwsIdMyGadget::JQUERY_MOBILE_CSS_URL );
+		wp_enqueue_style( 'jquerymobile-css' );
+	}
+
 	$css_file = get_template_directory_uri() . "/idMyGadget/idMyGadget.css";
 	wp_register_style( 'idMyGadget-css', $css_file );
 	wp_enqueue_style( 'idMyGadget-css' );
