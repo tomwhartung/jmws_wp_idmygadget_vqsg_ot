@@ -58,6 +58,7 @@ class JmwsIdMyGadgetMissingPlugin
 
 	public $supportedGadgetDetectors = array();
 	public $supportedThemes = array();
+	public $usingJQueryMobile = FALSE;
 
 	/**
 	 * A string that represents the gadget being used
