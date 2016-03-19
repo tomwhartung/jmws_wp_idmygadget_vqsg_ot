@@ -171,6 +171,13 @@ class JmwsIdMyGadgetMissingPlugin
 		return $originalAttributes;
 	}
 	/**
+	 * Because we are not using device detection, we only need to define this
+	 */
+	public function setIncludeSidebarVariables( $sidebarAllId="" )
+	{
+		return FALSE;
+	}
+	/**
 	 * Because we are not using device detection, assume we do not want the sidebar
 	 */
 	public function getIncludeSidebar()
