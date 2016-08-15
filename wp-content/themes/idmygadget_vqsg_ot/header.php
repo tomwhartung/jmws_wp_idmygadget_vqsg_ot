@@ -25,7 +25,6 @@ $site_title_or_name = $jmwsIdMyGadget->getSiteTitleOrName();
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-	<link rel="alternate" href="<?php echo esc_url( home_url('/') ); ?>" hreflang="en-us" />
 	<title><?php echo $site_title_or_name; ?></title>
 
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
