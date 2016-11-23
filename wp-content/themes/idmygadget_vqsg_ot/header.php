@@ -33,7 +33,7 @@ $site_title_or_name = $jmwsIdMyGadget->getSiteTitleOrName();
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<?php include_once("google_analytics.php") ?>
+	<?php include_once("google_analytics.php"); ?>
 	<div id="page" <?php echo $jmwsIdMyGadget->jqmDataRole['page'] ?> data-title="<?php echo $site_title_or_name; ?>">
 		<?php if( has_nav_menu('phone-header-nav') && $jmwsIdMyGadget->phoneHeaderNavThisDevice ) : ?>
 			<nav data-role="navbar">
